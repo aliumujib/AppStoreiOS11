@@ -7,29 +7,99 @@
 //
 
 import UIKit
+import LBTAComponents
+import Alamofire
 
-class TodaysAppsController: UINavigationController {
+class TodaysAppsController: DatasourceController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView?.showsVerticalScrollIndicator = false
+        collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
 
-        // Do any additional setup after loading the view.
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
+            layout.sectionHeadersPinToVisibleBounds = true
+            layout.minimumInteritemSpacing = 1
+            layout.minimumLineSpacing = 10
+        }
+        
+        let todayDataSource = TodayAppsDataSource()
+        self.datasource = todayDataSource
+        
+       
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 95)
     }
-    */
+    
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 436)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppCardCell.self), for: indexPath)
+        
+        if let data = datasource?.item(indexPath) as? TodayArticle{
+            if data.hasApp! && data.withBottomApp!{
+                if let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppCellBottomApp.self), for: indexPath) as? FeaturedAppCellBottomApp){
+                    cell.bindData(todayArticle: data)
+                   
+                    return cell
+                }
+            }
+            else if data.hasApp! && !data.withBottomApp!{
+                if let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppCellWithBigAppIcon.self), for: indexPath) as? FeaturedAppCellWithBigAppIcon){
+                    cell.bindData(todayArticle: data)
+                    
+                    return cell
+                }
+            }
+            else if data.briefDescription == ""
+            {
+                if let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppTopWhiteBg.self), for: indexPath) as? FeaturedAppTopWhiteBg){
+                    cell.bindData(todayArticle: data)
+                    
+                    return cell
+                }
+            }else{
+                if let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppCardCell.self), for: indexPath) as? FeaturedAppCardCell){
+                    cell.bindData(todayArticle: data)
+                    
+                    return cell
+                }
+            }
+        }
+        
+        return cell
+    }
+  
 
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header : GeneralHeaderCell
+        
+        if(kind == UICollectionElementKindSectionHeader){
+            header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell)!
+            
+            let headerItem = HeaderItem(smallTitle: "Monday, June 5".uppercased(), bigTitle: "App", hideDiv: true)
+            header.headerItem = headerItem
+            //header.hideDivider()
+            
+            return header
+        }
+        
+        return UICollectionViewCell()
+    }
+    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppsController: UITabBarController, UITabBarControllerDelegate {
+class TabsController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +22,34 @@ class AppsController: UITabBarController, UITabBarControllerDelegate {
         super.viewWillAppear(animated)
         
         // Create Tab one
-        let tabOne = UINavigationController()
+        let tabOne = TodaysAppsController()
         let tabOneBarItem = UITabBarItem(title: "Today", image: UIImage(named: "today"), selectedImage: UIImage(named: "today")?.maskWithColor(color: .blue))
-        
-        tabOne.tabBarItem = tabOneBarItem
         
         
         // Create Tab two
-        let tabTwo = UINavigationController()
-        let tabTwoBarItem2 = UITabBarItem(title: "Games", image: UIImage(named: "games"), selectedImage: UIImage(named: "games")?.maskWithColor(color: .blue))
+        let tabTwo = GamesController()
+        let tabTwoBarItem = UITabBarItem(title: "Games", image: UIImage(named: "games"), selectedImage: UIImage(named: "games")?.maskWithColor(color: .blue))
         
-        tabTwo.tabBarItem = tabTwoBarItem2
+        // Create Tab three
+        let tabThree = AppsViewController()
+        let tabThreeBarItem = UITabBarItem(title: "Apps", image: UIImage(named: "apps"), selectedImage: UIImage(named: "apps")?.maskWithColor(color: .blue))
         
+        // Create Tab 4
+        let tabFour = UpdatesViewController()
+        let tabFourBarItem = UITabBarItem(title: "Updates", image: UIImage(named: "updates"), selectedImage: UIImage(named: "updates")?.maskWithColor(color: .blue))
         
-        self.viewControllers = [tabOne, tabTwo]
+        // Create Tab 5
+        let tabFive = SearchViewController()
+        let tabFiveBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), selectedImage: UIImage(named: "search")?.maskWithColor(color: .blue))
+        
+        tabOne.tabBarItem = tabOneBarItem
+        tabTwo.tabBarItem = tabTwoBarItem
+        tabThree.tabBarItem = tabThreeBarItem
+        tabFour.tabBarItem = tabFourBarItem
+        tabFive.tabBarItem = tabFiveBarItem
+
+        
+        self.viewControllers = [tabOne, tabTwo, tabThree, tabFour, tabFive]
     }
     
     // UITabBarControllerDelegate method

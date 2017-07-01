@@ -7,21 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68045C729709FE5F1E61A904 /* Pods_AppStore_iOS_10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F038A0B87F10F00176AD243D /* Pods_AppStore_iOS_10.framework */; };
+		C60E4A121F066274001A8BEB /* DividerFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A111F066274001A8BEB /* DividerFooter.swift */; };
+		C60E4A141F067CD9001A8BEB /* SmallAppListHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */; };
+		C60E4A171F0688CE001A8BEB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A161F0688CE001A8BEB /* App.swift */; };
+		C60E4A191F068D54001A8BEB /* TodayArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A181F068D54001A8BEB /* TodayArticle.swift */; };
+		C60E4A1B1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A1A1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift */; };
+		C60E4A1E1F06BBFA001A8BEB /* FeaturedAppCellWithBigAppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A1D1F06BBFA001A8BEB /* FeaturedAppCellWithBigAppIcon.swift */; };
+		C6126AAF1F06238F000493BA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AAD1F06238F000493BA /* CustomCollectionViewCell.swift */; };
+		C6126AB21F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AB11F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift */; };
+		C6126AB41F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AB31F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift */; };
+		C6126AB61F065B57000493BA /* SmallAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AB51F065B57000493BA /* SmallAppCell.swift */; };
 		C62D7A431F044FC500A60799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A421F044FC500A60799 /* AppDelegate.swift */; };
-		C62D7A451F044FC500A60799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A441F044FC500A60799 /* ViewController.swift */; };
-		C62D7A481F044FC500A60799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D7A461F044FC500A60799 /* Main.storyboard */; };
+		C62D7A451F044FC500A60799 /* TabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A441F044FC500A60799 /* TabsController.swift */; };
 		C62D7A4A1F044FC500A60799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62D7A491F044FC500A60799 /* Assets.xcassets */; };
 		C62D7A4D1F044FC500A60799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D7A4B1F044FC500A60799 /* LaunchScreen.storyboard */; };
+		C62D7A551F04568900A60799 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A541F04568900A60799 /* Extension.swift */; };
+		C62D7A5C1F0459B400A60799 /* TodaysAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */; };
+		C62D7A5E1F0459CA00A60799 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5D1F0459CA00A60799 /* GamesController.swift */; };
+		C62D7A601F0459EB00A60799 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */; };
+		C62D7A621F0459F900A60799 /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A611F0459F900A60799 /* UpdatesViewController.swift */; };
+		C62D7A641F045A0400A60799 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A631F045A0400A60799 /* SearchViewController.swift */; };
+		C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */; };
+		C62D7A681F046B5200A60799 /* TodayAppsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A671F046B5200A60799 /* TodayAppsDataSource.swift */; };
+		C62D7A6A1F046F0B00A60799 /* FeaturedAppCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A691F046F0B00A60799 /* FeaturedAppCardCell.swift */; };
+		C62D7A6C1F047CA300A60799 /* ElevatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A6B1F047CA300A60799 /* ElevatedImageView.swift */; };
+		C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A6D1F047D2900A60799 /* CardView.swift */; };
+		C64A1BD31F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */; };
+		C666F5021F06FAB600F6771C /* FeaturedAppCellBottomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */; };
+		C6B8C9D11F07C18200391BBD /* BaseSectionedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */; };
+		C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */; };
+		C6B8C9D61F07E22400391BBD /* OnAppSelectedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */; };
+		C6D1C58B1F04CBE500D70D57 /* GamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D1C58A1F04CBE500D70D57 /* GamesDataSource.swift */; };
+		C6D1C58D1F04CCE800D70D57 /* HeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D1C58C1F04CCE800D70D57 /* HeaderItem.swift */; };
+		C6D1C5901F04CFE900D70D57 /* HorizontalBigAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D1C58F1F04CFE900D70D57 /* HorizontalBigAppCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78F3CE854DCEC0B8D43D301C /* Pods-AppStore iOS 10.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore iOS 10.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStore iOS 10/Pods-AppStore iOS 10.release.xcconfig"; sourceTree = "<group>"; };
+		A4E6BBCAF0ED15650A9C6D74 /* Pods-AppStore iOS 10.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore iOS 10.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppStore iOS 10/Pods-AppStore iOS 10.debug.xcconfig"; sourceTree = "<group>"; };
+		C60E4A111F066274001A8BEB /* DividerFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerFooter.swift; sourceTree = "<group>"; };
+		C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAppListHolderCell.swift; sourceTree = "<group>"; };
+		C60E4A161F0688CE001A8BEB /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C60E4A181F068D54001A8BEB /* TodayArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayArticle.swift; sourceTree = "<group>"; };
+		C60E4A1A1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppTopWhiteBg.swift; sourceTree = "<group>"; };
+		C60E4A1D1F06BBFA001A8BEB /* FeaturedAppCellWithBigAppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppCellWithBigAppIcon.swift; sourceTree = "<group>"; };
+		C6126AAD1F06238F000493BA /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6126AB11F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGHorizontalLinearFlowLayout.swift; sourceTree = "<group>"; };
+		C6126AB31F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingCollectionViewFlowlayout.swift; sourceTree = "<group>"; };
+		C6126AB51F065B57000493BA /* SmallAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAppCell.swift; sourceTree = "<group>"; };
 		C62D7A3F1F044FC500A60799 /* AppStore iOS 10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore iOS 10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D7A421F044FC500A60799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C62D7A441F044FC500A60799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C62D7A471F044FC500A60799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C62D7A441F044FC500A60799 /* TabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsController.swift; sourceTree = "<group>"; };
 		C62D7A491F044FC500A60799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62D7A4C1F044FC500A60799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62D7A4E1F044FC500A60799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62D7A541F04568900A60799 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaysAppsController.swift; sourceTree = "<group>"; };
+		C62D7A5D1F0459CA00A60799 /* GamesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
+		C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		C62D7A611F0459F900A60799 /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesViewController.swift; sourceTree = "<group>"; };
+		C62D7A631F045A0400A60799 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralHeaderCell.swift; sourceTree = "<group>"; };
+		C62D7A671F046B5200A60799 /* TodayAppsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayAppsDataSource.swift; sourceTree = "<group>"; };
+		C62D7A691F046F0B00A60799 /* FeaturedAppCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppCardCell.swift; sourceTree = "<group>"; };
+		C62D7A6B1F047CA300A60799 /* ElevatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatedImageView.swift; sourceTree = "<group>"; };
+		C62D7A6D1F047D2900A60799 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargePhotoHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppCellBottomApp.swift; sourceTree = "<group>"; };
+		C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionedListController.swift; sourceTree = "<group>"; };
+		C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnAppSelectedDelegate.swift; sourceTree = "<group>"; };
+		C6D1C5881F04C4B800D70D57 /* AppStore iOS 10-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppStore iOS 10-Bridging-Header.h"; sourceTree = "<group>"; };
+		C6D1C5891F04C4B800D70D57 /* UIImage_AverageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImage_AverageColor.h; sourceTree = "<group>"; };
+		C6D1C58A1F04CBE500D70D57 /* GamesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesDataSource.swift; sourceTree = "<group>"; };
+		C6D1C58C1F04CCE800D70D57 /* HeaderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderItem.swift; sourceTree = "<group>"; };
+		C6D1C58F1F04CFE900D70D57 /* HorizontalBigAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalBigAppCell.swift; sourceTree = "<group>"; };
+		F038A0B87F10F00176AD243D /* Pods_AppStore_iOS_10.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_iOS_10.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +91,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68045C729709FE5F1E61A904 /* Pods_AppStore_iOS_10.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3688FC6E5065A47CF9BBC2F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F038A0B87F10F00176AD243D /* Pods_AppStore_iOS_10.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51A0F1FF459AE20E3DEB23F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4E6BBCAF0ED15650A9C6D74 /* Pods-AppStore iOS 10.debug.xcconfig */,
+				78F3CE854DCEC0B8D43D301C /* Pods-AppStore iOS 10.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C60E4A151F0687E3001A8BEB /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				C62D7A671F046B5200A60799 /* TodayAppsDataSource.swift */,
+				C6D1C58A1F04CBE500D70D57 /* GamesDataSource.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		C60E4A1C1F06B798001A8BEB /* FeaturedAppCells */ = {
+			isa = PBXGroup;
+			children = (
+				C62D7A691F046F0B00A60799 /* FeaturedAppCardCell.swift */,
+				C60E4A1A1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift */,
+				C60E4A1D1F06BBFA001A8BEB /* FeaturedAppCellWithBigAppIcon.swift */,
+				C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */,
+			);
+			name = FeaturedAppCells;
+			sourceTree = "<group>";
+		};
 		C62D7A361F044FC500A60799 = {
 			isa = PBXGroup;
 			children = (
 				C62D7A411F044FC500A60799 /* AppStore iOS 10 */,
 				C62D7A401F044FC500A60799 /* Products */,
+				51A0F1FF459AE20E3DEB23F1 /* Pods */,
+				3688FC6E5065A47CF9BBC2F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +156,88 @@
 		C62D7A411F044FC500A60799 /* AppStore iOS 10 */ = {
 			isa = PBXGroup;
 			children = (
+				C62D7A5A1F04596E00A60799 /* Views */,
+				C62D7A591F04596600A60799 /* Controller */,
+				C62D7A581F04595300A60799 /* Models */,
 				C62D7A421F044FC500A60799 /* AppDelegate.swift */,
-				C62D7A441F044FC500A60799 /* ViewController.swift */,
-				C62D7A461F044FC500A60799 /* Main.storyboard */,
 				C62D7A491F044FC500A60799 /* Assets.xcassets */,
 				C62D7A4B1F044FC500A60799 /* LaunchScreen.storyboard */,
 				C62D7A4E1F044FC500A60799 /* Info.plist */,
+				C62D7A541F04568900A60799 /* Extension.swift */,
+				C6D1C5891F04C4B800D70D57 /* UIImage_AverageColor.h */,
+				C6D1C5881F04C4B800D70D57 /* AppStore iOS 10-Bridging-Header.h */,
 			);
 			path = "AppStore iOS 10";
+			sourceTree = "<group>";
+		};
+		C62D7A581F04595300A60799 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C60E4A151F0687E3001A8BEB /* DataSources */,
+				C6D1C58C1F04CCE800D70D57 /* HeaderItem.swift */,
+				C60E4A161F0688CE001A8BEB /* App.swift */,
+				C60E4A181F068D54001A8BEB /* TodayArticle.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C62D7A591F04596600A60799 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8C9D41F07E20000391BBD /* Delegates */,
+				C6B8C9CF1F07C14A00391BBD /* SuperClasses */,
+				C62D7A441F044FC500A60799 /* TabsController.swift */,
+				C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */,
+				C62D7A5D1F0459CA00A60799 /* GamesController.swift */,
+				C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */,
+				C62D7A611F0459F900A60799 /* UpdatesViewController.swift */,
+				C62D7A631F045A0400A60799 /* SearchViewController.swift */,
+				C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C62D7A5A1F04596E00A60799 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6D1C58E1F04CF9700D70D57 /* CustomViews */,
+				C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */,
+				C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */,
+				C60E4A1C1F06B798001A8BEB /* FeaturedAppCells */,
+				C6D1C58F1F04CFE900D70D57 /* HorizontalBigAppCell.swift */,
+				C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */,
+				C6126AB51F065B57000493BA /* SmallAppCell.swift */,
+				C60E4A111F066274001A8BEB /* DividerFooter.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C6B8C9CF1F07C14A00391BBD /* SuperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */,
+			);
+			name = SuperClasses;
+			sourceTree = "<group>";
+		};
+		C6B8C9D41F07E20000391BBD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		C6D1C58E1F04CF9700D70D57 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C6126AAD1F06238F000493BA /* CustomCollectionViewCell.swift */,
+				C62D7A6B1F047CA300A60799 /* ElevatedImageView.swift */,
+				C6126AB11F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift */,
+				C62D7A6D1F047D2900A60799 /* CardView.swift */,
+				C6126AB31F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C62D7A511F044FC500A60799 /* Build configuration list for PBXNativeTarget "AppStore iOS 10" */;
 			buildPhases = (
+				F40BC044D4967E2A679765B6 /* [CP] Check Pods Manifest.lock */,
 				C62D7A3B1F044FC500A60799 /* Sources */,
 				C62D7A3C1F044FC500A60799 /* Frameworks */,
 				C62D7A3D1F044FC500A60799 /* Resources */,
+				241A8A8DBC22C44F40AABCD0 /* [CP] Embed Pods Frameworks */,
+				04D6D177FE86101E6A8B49A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +276,7 @@
 					C62D7A3E1F044FC500A60799 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = V5L9D6NWDM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,18 +306,94 @@
 			files = (
 				C62D7A4D1F044FC500A60799 /* LaunchScreen.storyboard in Resources */,
 				C62D7A4A1F044FC500A60799 /* Assets.xcassets in Resources */,
-				C62D7A481F044FC500A60799 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04D6D177FE86101E6A8B49A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppStore iOS 10/Pods-AppStore iOS 10-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		241A8A8DBC22C44F40AABCD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppStore iOS 10/Pods-AppStore iOS 10-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F40BC044D4967E2A679765B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C62D7A3B1F044FC500A60799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62D7A451F044FC500A60799 /* ViewController.swift in Sources */,
+				C60E4A141F067CD9001A8BEB /* SmallAppListHolderCell.swift in Sources */,
+				C60E4A121F066274001A8BEB /* DividerFooter.swift in Sources */,
+				C6126AB21F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift in Sources */,
+				C62D7A681F046B5200A60799 /* TodayAppsDataSource.swift in Sources */,
+				C6D1C58B1F04CBE500D70D57 /* GamesDataSource.swift in Sources */,
+				C6D1C5901F04CFE900D70D57 /* HorizontalBigAppCell.swift in Sources */,
+				C6126AB61F065B57000493BA /* SmallAppCell.swift in Sources */,
+				C6B8C9D61F07E22400391BBD /* OnAppSelectedDelegate.swift in Sources */,
+				C62D7A551F04568900A60799 /* Extension.swift in Sources */,
+				C666F5021F06FAB600F6771C /* FeaturedAppCellBottomApp.swift in Sources */,
+				C64A1BD31F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift in Sources */,
+				C6126AB41F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift in Sources */,
+				C62D7A6C1F047CA300A60799 /* ElevatedImageView.swift in Sources */,
+				C6126AAF1F06238F000493BA /* CustomCollectionViewCell.swift in Sources */,
+				C62D7A5C1F0459B400A60799 /* TodaysAppsController.swift in Sources */,
+				C62D7A641F045A0400A60799 /* SearchViewController.swift in Sources */,
+				C60E4A1E1F06BBFA001A8BEB /* FeaturedAppCellWithBigAppIcon.swift in Sources */,
+				C6B8C9D11F07C18200391BBD /* BaseSectionedListController.swift in Sources */,
+				C60E4A191F068D54001A8BEB /* TodayArticle.swift in Sources */,
+				C62D7A621F0459F900A60799 /* UpdatesViewController.swift in Sources */,
+				C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */,
+				C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */,
+				C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */,
+				C6D1C58D1F04CCE800D70D57 /* HeaderItem.swift in Sources */,
+				C62D7A601F0459EB00A60799 /* AppsViewController.swift in Sources */,
+				C62D7A451F044FC500A60799 /* TabsController.swift in Sources */,
+				C62D7A5E1F0459CA00A60799 /* GamesController.swift in Sources */,
+				C60E4A1B1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift in Sources */,
+				C60E4A171F0688CE001A8BEB /* App.swift in Sources */,
+				C62D7A6A1F046F0B00A60799 /* FeaturedAppCardCell.swift in Sources */,
 				C62D7A431F044FC500A60799 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,14 +401,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C62D7A461F044FC500A60799 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C62D7A471F044FC500A60799 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C62D7A4B1F044FC500A60799 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,26 +509,33 @@
 		};
 		C62D7A521F044FC500A60799 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E6BBCAF0ED15650A9C6D74 /* Pods-AppStore iOS 10.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = V5L9D6NWDM;
 				INFOPLIST_FILE = "AppStore iOS 10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alium.AppStore-iOS-10";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppStore iOS 10/AppStore iOS 10-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		C62D7A531F044FC500A60799 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78F3CE854DCEC0B8D43D301C /* Pods-AppStore iOS 10.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = V5L9D6NWDM;
 				INFOPLIST_FILE = "AppStore iOS 10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alium.AppStore-iOS-10";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppStore iOS 10/AppStore iOS 10-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -304,6 +559,7 @@
 				C62D7A531F044FC500A60799 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

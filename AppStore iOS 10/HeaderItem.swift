@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+
+struct HeaderItem {
+   var smalltitle: String?
+    var bigTitle: String?
+    var hideDivider : Bool?
+    
+    init(smallTitle: String, bigTitle: String, hideDiv: Bool) {
+        self.smalltitle  = smallTitle
+        self.bigTitle = bigTitle
+        self.hideDivider = hideDiv
+    }
+}

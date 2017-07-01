@@ -11,34 +11,48 @@ import LBTAComponents
 
 class GeneralHeaderCell: DatasourceCell {
 
+    var headerItem : HeaderItem? {
+    
+        didSet{
+        smallTitle.text = headerItem?.smalltitle
+        bigTitle.text = headerItem?.bigTitle
+        divider.isHidden = (headerItem?.hideDivider)!
+        }
+    
+    }
+    
+    
+    
+    
     var smallTitle : UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 10)
-        label.text = "Monday, June 5".uppercased()
+        //label.text = "Monday, June 5".uppercased()
         //label.textColor = UIColor(white: 1, alpha: 0.4)
         return label
     }()
     
     var bigTitle : UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 30)
-        label.text = "Today"
+        label.font = UIFont.boldSystemFont(ofSize: 30)
+        //label.text = "Today"
         return label
     }()
     
-    var avaImg : ElevatedImageView = {
-        let img = ElevatedImageView()
+    var avaImg : UIImageView = {
+        let img = UIImageView()
         img.image = UIImage(named: "alium")
-        img.layer.cornerRadius = img.frame.size.width / 2
+        img.layer.cornerRadius = 20
         img.clipsToBounds = true
         return img
     }()
     
     var divider : UIView = {
         let divi = UIView()
-        divi.backgroundColor = .gray
+        divi.backgroundColor = .lightGray
         return divi
     }()
+    
     
     override func setupViews() {
         super.setupViews()
@@ -47,6 +61,15 @@ class GeneralHeaderCell: DatasourceCell {
         layoutViews()
 
     }
+    
+    func hideDivider() {
+        divider.isHidden = true
+    }
+    
+    func hideSmallTitle() {
+        smallTitle.isHidden = true
+    }
+
     
     func layoutViews() {
         addSubview(smallTitle)
@@ -62,7 +85,7 @@ class GeneralHeaderCell: DatasourceCell {
         
         avaImg.anchor(topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 40, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 41, heightConstant: 41)
         
-        divider.anchor(nil, left: bigTitle.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 2)
+        divider.anchor(nil, left: bigTitle.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
         
     }
 

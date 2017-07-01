@@ -11,11 +11,11 @@ import UIKit
 @IBDesignable
 class CardView: UIView {
     
-    @IBInspectable var cornerRadius: CGFloat = 2
-    @IBInspectable var shadowOffsetWidth: Int = 0
-    @IBInspectable var shadowOffsetHeight: Int = 1
-    @IBInspectable var shadowColor: UIColor? = UIColor.black
-    @IBInspectable var shadowOpacity: Float = 0.5
+     var cornerRadius: CGFloat = 2
+     var shadowOffsetWidth: Int = 0
+     var shadowOffsetHeight: Int = Int(0.5)
+     var shadowColor: UIColor? = UIColor.black
+     var shadowOpacity: Float = 0.2
     
     override func layoutSubviews() {
         layer.cornerRadius = cornerRadius

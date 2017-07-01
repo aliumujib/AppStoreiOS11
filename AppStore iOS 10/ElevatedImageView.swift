@@ -11,11 +11,11 @@ import UIKit
 @IBDesignable
 class ElevatedImageView: UIImageView {
     
-    @IBInspectable var cornerRadius: CGFloat = 3
-    @IBInspectable var shadowOffsetWidth: Int = 0
-    @IBInspectable var shadowOffsetHeight: Int = 1
-    @IBInspectable var shadowColor: UIColor? = UIColor.black
-    @IBInspectable var shadowOpacity: Float = 0.5
+     var cornerRadius: CGFloat = 6
+     var shadowOffsetWidth: Int = 0
+     var shadowOffsetHeight: Int = 1
+     var shadowColor: UIColor? = UIColor.black
+     var shadowOpacity: Float = 0.2
     
     override func layoutSubviews() {
         layer.cornerRadius = cornerRadius
