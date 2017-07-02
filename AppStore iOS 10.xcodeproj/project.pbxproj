@@ -36,6 +36,10 @@
 		C64A1BD31F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */; };
 		C666F5021F06FAB600F6771C /* FeaturedAppCellBottomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */; };
 		C6A8C2351F08F2F5001C98A0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8C2341F08F2F5001C98A0 /* Utils.swift */; };
+		C6A8C2371F0912C2001C98A0 /* ScreenShotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8C2361F0912C2001C98A0 /* ScreenShotViewCell.swift */; };
+		C6A8C2391F0913D0001C98A0 /* ScreenShotsHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8C2381F0913D0001C98A0 /* ScreenShotsHolderCell.swift */; };
+		C6A8C23C1F091715001C98A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8C23B1F091715001C98A0 /* Constants.swift */; };
+		C6A8C23E1F091A7C001C98A0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8C23D1F091A7C001C98A0 /* Service.swift */; };
 		C6B8C9D11F07C18200391BBD /* BaseSectionedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */; };
 		C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */; };
 		C6B8C9D61F07E22400391BBD /* OnAppSelectedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */; };
@@ -77,6 +81,10 @@
 		C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargePhotoHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppCellBottomApp.swift; sourceTree = "<group>"; };
 		C6A8C2341F08F2F5001C98A0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C6A8C2361F0912C2001C98A0 /* ScreenShotViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShotViewCell.swift; sourceTree = "<group>"; };
+		C6A8C2381F0913D0001C98A0 /* ScreenShotsHolderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShotsHolderCell.swift; sourceTree = "<group>"; };
+		C6A8C23B1F091715001C98A0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6A8C23D1F091A7C001C98A0 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionedListController.swift; sourceTree = "<group>"; };
 		C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
 		C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnAppSelectedDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 		C62D7A411F044FC500A60799 /* AppStore iOS 10 */ = {
 			isa = PBXGroup;
 			children = (
+				C6A8C23A1F0916FF001C98A0 /* Utils */,
 				C62D7A5A1F04596E00A60799 /* Views */,
 				C62D7A591F04596600A60799 /* Controller */,
 				C62D7A581F04595300A60799 /* Models */,
@@ -165,10 +174,8 @@
 				C62D7A491F044FC500A60799 /* Assets.xcassets */,
 				C62D7A4B1F044FC500A60799 /* LaunchScreen.storyboard */,
 				C62D7A4E1F044FC500A60799 /* Info.plist */,
-				C62D7A541F04568900A60799 /* Extension.swift */,
 				C6D1C5891F04C4B800D70D57 /* UIImage_AverageColor.h */,
 				C6D1C5881F04C4B800D70D57 /* AppStore iOS 10-Bridging-Header.h */,
-				C6A8C2341F08F2F5001C98A0 /* Utils.swift */,
 			);
 			path = "AppStore iOS 10";
 			sourceTree = "<group>";
@@ -211,8 +218,21 @@
 				C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */,
 				C6126AB51F065B57000493BA /* SmallAppCell.swift */,
 				C60E4A111F066274001A8BEB /* DividerFooter.swift */,
+				C6A8C2361F0912C2001C98A0 /* ScreenShotViewCell.swift */,
+				C6A8C2381F0913D0001C98A0 /* ScreenShotsHolderCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C6A8C23A1F0916FF001C98A0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C62D7A541F04568900A60799 /* Extension.swift */,
+				C6A8C2341F08F2F5001C98A0 /* Utils.swift */,
+				C6A8C23B1F091715001C98A0 /* Constants.swift */,
+				C6A8C23D1F091A7C001C98A0 /* Service.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		C6B8C9CF1F07C14A00391BBD /* SuperClasses */ = {
@@ -368,9 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60E4A141F067CD9001A8BEB /* SmallAppListHolderCell.swift in Sources */,
+				C6A8C2391F0913D0001C98A0 /* ScreenShotsHolderCell.swift in Sources */,
 				C60E4A121F066274001A8BEB /* DividerFooter.swift in Sources */,
 				C6126AB21F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift in Sources */,
 				C62D7A681F046B5200A60799 /* TodayAppsDataSource.swift in Sources */,
+				C6A8C23E1F091A7C001C98A0 /* Service.swift in Sources */,
 				C6D1C58B1F04CBE500D70D57 /* GamesDataSource.swift in Sources */,
 				C6D1C5901F04CFE900D70D57 /* HorizontalBigAppCell.swift in Sources */,
 				C6126AB61F065B57000493BA /* SmallAppCell.swift in Sources */,
@@ -391,9 +413,11 @@
 				C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */,
 				C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */,
 				C6A8C2351F08F2F5001C98A0 /* Utils.swift in Sources */,
+				C6A8C23C1F091715001C98A0 /* Constants.swift in Sources */,
 				C6D1C58D1F04CCE800D70D57 /* HeaderItem.swift in Sources */,
 				C62D7A601F0459EB00A60799 /* AppsViewController.swift in Sources */,
 				C62D7A451F044FC500A60799 /* TabsController.swift in Sources */,
+				C6A8C2371F0912C2001C98A0 /* ScreenShotViewCell.swift in Sources */,
 				C62D7A5E1F0459CA00A60799 /* GamesController.swift in Sources */,
 				C60E4A1B1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift in Sources */,
 				C60E4A171F0688CE001A8BEB /* App.swift in Sources */,

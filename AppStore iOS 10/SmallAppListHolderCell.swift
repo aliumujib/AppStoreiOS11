@@ -18,7 +18,10 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
     var searchTerm : String?{
         didSet{
             if let s = searchTerm{
-                getData(searchTerm: s)
+                Service.sharedInstance.getAppSearch(searchTerm: s, completed: {data in
+                    self.apps = data
+                    self.collectionView.reloadData()
+                })
             }
         }
     }
@@ -71,33 +74,7 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
         appSelectedDelegate?.setSelectedApp(app: app)
     }
     
-    func getData(searchTerm: String) {
-        let headers: HTTPHeaders = ["X-Apptweak-Key": "ZZtdPAFn2e4TlvAqQZ_9TTlZlx4"]
-        Alamofire.request("https://api.apptweak.com/ios/searches.json?term=\(searchTerm)&country=us&language=us&device=iphone", headers: headers).responseJSON { response in
-            
-            //print(response)
-            
-            if let result  = response.result.value as? Dictionary<String, Any>{
-                
-                if let mainDict = result["content"] as? [Dictionary<String, Any>]{
-                    if !mainDict.isEmpty{
-                        for article in mainDict{
-                            var app = App()
-                            app.appName = article["title"] as! String!
-                            app.appDesc = article["developer"] as! String!
-                            app.appPhoto = article["icon"] as! String!
-                            app.appID = article["id"] as! Int!
-                            app.appCategory = article["price"] as! String!
-                            app.appRating = article["rating"] as! Double
-                            self.apps.append(app)
-                        }
-                        self.collectionView.reloadData()
-                    }
-                }
-            }
-        
-        }
-    }
+  
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.frame.width - 32, height: 95)

@@ -24,7 +24,7 @@ class GamesDataSource: Datasource {
     
     
     override func numberOfSections() -> Int {
-        return 3
+        return 4
     }
     
     override func numberOfItems(_ section: Int) -> Int {

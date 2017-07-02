@@ -58,7 +58,7 @@ class TodaysAppsController: DatasourceController  {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppCardCell.self), for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(FeaturedAppCardCell.self), for: indexPath)
         
         if let data = datasource?.item(indexPath) as? TodayArticle{
             if data.hasApp! && data.withBottomApp!{

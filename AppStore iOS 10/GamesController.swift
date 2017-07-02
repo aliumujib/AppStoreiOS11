@@ -10,7 +10,7 @@ import LBTAComponents
 
 class GamesController: DatasourceController, OnAppSelectedDelegate {
 
-    let items = ["angry","war"]
+    let items = ["angry","war", "clan"]
     
     
     let app1 = App(appName: "Injustice", appDesc: "When iconic superheroes collide", appID: 1, appCategory: "NEW GAME", appPrice: 0, appStory:"123", appPhoto: "batmandem", screenShots: [""])
@@ -23,6 +23,8 @@ class GamesController: DatasourceController, OnAppSelectedDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView?.showsVerticalScrollIndicator = false
+        
         let gamesDataSource = GamesDataSource()
         self.datasource = gamesDataSource
         

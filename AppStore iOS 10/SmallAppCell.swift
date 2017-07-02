@@ -118,7 +118,7 @@ class SmallAppCell: DatasourceCell {
         
         imageBg.anchor(smallTitle.bottomAnchor, left: smallTitle.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 0, bottomConstant: 16, rightConstant: 8, widthConstant: 70, heightConstant: 70)
        
-        appDetails.anchor(smallTitle.bottomAnchor, left: imageBg.rightAnchor, bottom: nil, right: rightAnchor, topConstant: 6, leftConstant: 8, bottomConstant: 8, rightConstant: 50, widthConstant: 0, heightConstant: 50)
+        appDetails.anchor(smallTitle.bottomAnchor, left: imageBg.rightAnchor, bottom: nil, right: rightAnchor, topConstant: 6, leftConstant: 8, bottomConstant: 8, rightConstant: 60, widthConstant: 0, heightConstant: 50)
         
         getBtn.anchor(appDetails.bottomAnchor, left: appDetails.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         

@@ -11,7 +11,7 @@ import LBTAComponents
 
 class AppsViewController: DatasourceController {
     
-    let items = ["news","health"]
+    let items = ["news","health", "money"]
     
     let app1 = App(appName: "Airbnb", appDesc: "New summer experiences to book", appID: 1, appCategory: "REDISCOVER THIS", appPrice: 0, appStory:"123", appPhoto: "home", screenShots: [""])
     
@@ -24,7 +24,8 @@ class AppsViewController: DatasourceController {
         
         let gamesDataSource = GamesDataSource()
         self.datasource = gamesDataSource
-        
+        collectionView?.showsVerticalScrollIndicator = false
+
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
             layout.sectionHeadersPinToVisibleBounds = true
             collectionView?.showsHorizontalScrollIndicator = false

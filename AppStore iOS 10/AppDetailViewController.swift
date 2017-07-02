@@ -9,21 +9,37 @@
 import UIKit
 import Cosmos
 
-class AppDetailViewController: UIViewController {
+class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    let cellID = "cellID"
+    let footerID = "footerID"
+    
+    var collectionView : UICollectionView = {
+        let layout = SnappingCollectionViewLayout()
+        layout.minimumLineSpacing = 0
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.showsHorizontalScrollIndicator = false
+        cv.backgroundColor = .white
+        return cv
+    }()
     
     var headerBG : UIView = {
         let whiteBG = UIView()
-        whiteBG.backgroundColor = .white
         return whiteBG
     }()
     
+    var collectionViewAppCopy: App?
+    
     var app: App? {
         didSet{
-            appDetails.attributedText = getAttributedStringForDesc(app: app!)
+            appDetails.attributedText = getAttributedStringForDescDetail(app: app!)
             
             if let price = app?.appCategory{
-            
-                getBtn.setTitle(price, for: .normal)
+                let attributedString = NSMutableAttributedString(string: price, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.white])
+                getBtn.setAttributedTitle(attributedString, for: .normal)
+                //getBtn.setTitle(price, for: .normal)
             }
             if let rating = app?.appRating{
                 ratingBar.rating = rating
@@ -33,6 +49,14 @@ class AppDetailViewController: UIViewController {
             if let url = app?.appPhoto{
                 let url = URL(string: url)
                 appIcon.kf.setImage(with: url)
+            }
+            
+            if let appID = app?.appID{
+                Service.sharedInstance.getAppDetails(appID: appID, completed: { (application) in
+                    self.collectionViewAppCopy = application
+                    self.collectionView.reloadData()
+                    print("GOT HERE 1")
+                })
             }
             
         }
@@ -51,7 +75,6 @@ class AppDetailViewController: UIViewController {
     }()
     
     var ratingValue : UILabel = {
-        //THIS IS JUST TERRIBLE, SHAMEFUL I AM BUT WILL REFACTOR ONCE I FIND A WAY
         let lightGray = UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1)
         
         let label = UILabel()
@@ -139,8 +162,6 @@ class AppDetailViewController: UIViewController {
         let backGroundImage = UIImage(color: headerBlue, size: CGSize(width: 30, height: 10))
         
         let btn = UIButton()
-        let attributedString = NSMutableAttributedString(string: "".uppercased(), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 12), NSForegroundColorAttributeName: UIColor.white])
-        btn.setAttributedTitle(attributedString, for: .normal)
         btn.setBackgroundImage(backGroundImage, for: .normal)
         btn.layer.cornerRadius = 10
         btn.clipsToBounds = true
@@ -184,9 +205,74 @@ class AppDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         setupHeaderView()
+        setUpCollectionView()
         
         
         
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if(indexPath.section == 0){
+           return CGSize(width: collectionView.frame.width, height: 300)
+        }
+        
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 0{
+            print("GOT HERE 2")
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: screenShotCellID, for: indexPath) as? ScreenShotsHolderCell{
+                print("GOT HERE 3")
+                cell.screenShotURLS = collectionViewAppCopy?.screenShots
+                
+                return cell
+            }
+        }
+        
+        
+        return UICollectionViewCell() 
+    }
+    
+    let screenShotCellID = "screenShotCellID"
+    
+    func setUpCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.register(ScreenShotsHolderCell.self, forCellWithReuseIdentifier: screenShotCellID)
+        collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerID)
+        collectionView.anchor(headerBG.bottomAnchor, left: self.view.leftAnchor, bottom: self.view.bottomAnchor, right: self.view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        self.automaticallyAdjustsScrollViewInsets = false
+        collectionView.contentInset = UIEdgeInsetsMake(-90, 8, 8, 8)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        var footer : UICollectionViewCell
+        
+        if(kind == UICollectionElementKindSectionFooter){
+            if let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerID, for: indexPath) as? DividerFooter{
+                footer.smallSectionDivider = false
+                return footer
+            }
+        }
+        
+        return UICollectionViewCell()
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 25)
     }
     
     func setupHeaderView() {
@@ -202,9 +288,9 @@ class AppDetailViewController: UIViewController {
         headerBG.addSubview(ageTV)
         headerBG.addSubview(versionTV)
         
-        appIcon.anchor(headerBG.topAnchor, left: headerBG.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 16, bottomConstant: 16, rightConstant: 8, widthConstant: 90, heightConstant: 90)
+        appIcon.anchor(headerBG.topAnchor, left: headerBG.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 16, rightConstant: 8, widthConstant: 90, heightConstant: 90)
         
-        appDetails.anchor(appIcon.topAnchor, left: appIcon.rightAnchor, bottom: nil, right: headerBG.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 8, rightConstant: 8, widthConstant: 0, heightConstant: 50)
+        appDetails.anchor(appIcon.topAnchor, left: appIcon.rightAnchor, bottom: nil, right: headerBG.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 8, rightConstant: 8, widthConstant: 0, heightConstant: 60)
         
         getBtn.anchor(appDetails.bottomAnchor, left: appDetails.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
@@ -212,7 +298,7 @@ class AppDetailViewController: UIViewController {
         
         
         
-        headerBG.anchor(self.view.topAnchor, left: self.view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 250)
+        headerBG.anchor(self.view.topAnchor, left: self.view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 145)
         
         ratingValue.anchor(appIcon.bottomAnchor, left: appIcon.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 16, rightConstant: 8, widthConstant: 0, heightConstant: 0)
         
