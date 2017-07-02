@@ -64,7 +64,18 @@ extension UIViewController{
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    func setUpNavBar()  {
+        if let navBar = self.navigationController?.navigationBar{
+            navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            navBar.shadowImage = UIImage()
+            navBar.isTranslucent = false
+            navBar.backgroundColor = .white
+            
+        }
+    }
+    
 }
+
 
 extension UIView {
     

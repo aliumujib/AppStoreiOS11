@@ -19,6 +19,7 @@ struct App {
     var appPhoto: String?
     var screenShots: [String]?
     var appRating: Double?
+    var appReviews: [Review]?
     
     init() {
         

@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReadMoreTextView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>52DB1F3A881D0A274A71AE9D0F2CA327</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>F39F88EF2E52BF1019C77F3BE72455AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FECF3EA81B88AD1AF82480B307473FA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,5 +1,5 @@
 //
-//  ScreenShotsHolderCell.swift
+//  RatingCollectionViewCell.swift
 //  AppStore iOS 10
 //
 //  Created by Abdul-Mujeeb Aliu on 7/2/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ScreenShotsHolderCell: UICollectionViewCell , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class RatingCollectionViewCell: UICollectionViewCell , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let cellID = "cellID"
     
-    var screenShotURLS : [String]? {
+    var reviews : [Review]? {
         didSet{
             collectionView.reloadData()
         }
@@ -36,42 +36,31 @@ class ScreenShotsHolderCell: UICollectionViewCell , UICollectionViewDelegate, UI
         return divi
     }()
     
-    var iPadImage : UIImageView = {
-        let image = UIImageView()
-        image.image = #imageLiteral(resourceName: "ipad")
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
     
-    var iPadAppsLabl : UILabel = {
+    var titleLbl : UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 10)
-        let lightGray = UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1)
-        label.textColor = lightGray
-        label.text = "Offers iPad App"
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.text = "Ratings and Reviews"
         return label
     }()
     
     
     override func layoutSubviews() {
         addSubview(collectionView)
-        addSubview(iPadAppsLabl)
+        addSubview(titleLbl)
         addSubview(divider)
-        addSubview(iPadImage)
         
-        collectionView.anchor(topAnchor, left: leftAnchor, bottom: iPadAppsLabl.topAnchor, right: rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        titleLbl.anchor(topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 12, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        collectionView.contentInset = UIEdgeInsetsMake(0, 14, 0, 14)
+        collectionView.anchor(titleLbl.bottomAnchor, left: leftAnchor, bottom: divider.topAnchor, right: rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        iPadImage.anchor(nil, left: leftAnchor, bottom: divider.topAnchor, right: nil, topConstant: 16, leftConstant: 16, bottomConstant: 8, rightConstant: 16, widthConstant: 10, heightConstant: 20)
-        
-        iPadAppsLabl.anchor(nil, left: iPadImage.rightAnchor, bottom: divider.topAnchor, right: rightAnchor, topConstant: 16, leftConstant: 8, bottomConstant: 12, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        collectionView.contentInset = UIEdgeInsetsMake(0, 10, 0, 14)
         
         divider.anchor(nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
         
+        collectionView.register(RatingsViewCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ScreenShotViewCell.self, forCellWithReuseIdentifier: cellID)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -79,7 +68,7 @@ class ScreenShotsHolderCell: UICollectionViewCell , UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let count = screenShotURLS?.count{
+        if let count = reviews?.count{
             return count
         }
         
@@ -88,15 +77,15 @@ class ScreenShotsHolderCell: UICollectionViewCell , UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if(indexPath.section == 0){
-            return CGSize(width: collectionView.frame.width / 1.5, height: 300)
+            return CGSize(width: collectionView.frame.width - 32, height: 200)
         }
         
         return .zero
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? ScreenShotViewCell{
-            cell.imgURL = screenShotURLS?[indexPath.item]
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? RatingsViewCell{
+            cell.rating = reviews?[indexPath.item]
             return cell
         }
         

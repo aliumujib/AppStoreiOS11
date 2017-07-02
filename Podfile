@@ -10,5 +10,6 @@ target 'AppStore iOS 10' do
   pod 'Alamofire', '~> 4.4'
   pod 'Kingfisher', '~> 3.0'
   pod 'Cosmos', '~> 10.0'
-
+  pod 'ReadMoreTextView'
+  
 end

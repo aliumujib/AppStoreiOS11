@@ -9,7 +9,7 @@
 import UIKit
 import LBTAComponents
 
-class AppsViewController: DatasourceController {
+class AppsViewController: DatasourceController, OnAppSelectedDelegate {
     
     let items = ["news","health", "money"]
     
@@ -39,6 +39,11 @@ class AppsViewController: DatasourceController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setSelectedApp(app: App) {
+        let appDetailVC = AppDetailViewController()
+        appDetailVC.app = app
+        self.show(appDetailVC, sender: appDetailVC)
+    }
     
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -86,6 +91,7 @@ class AppsViewController: DatasourceController {
             {
                 //USe the section to access array instead of
                 cell.searchTerm = items[indexPath.section - 1]
+                cell.appSelectedDelegate = self
                 return cell
             }
         }else{

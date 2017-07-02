@@ -77,7 +77,7 @@ class GeneralHeaderCell: DatasourceCell {
         addSubview(avaImg)
         addSubview(divider)
         
-        self.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        self.backgroundColor = UIColor.white//.withAlphaComponent(0.9)
 
         smallTitle.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 36, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         

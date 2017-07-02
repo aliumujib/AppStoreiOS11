@@ -12,7 +12,8 @@ class UpdatesViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setUpNavBar()
         // Do any additional setup after loading the view.
     }
 

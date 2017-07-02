@@ -18,6 +18,11 @@
 		C6126AB21F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AB11F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift */; };
 		C6126AB41F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AB31F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift */; };
 		C6126AB61F065B57000493BA /* SmallAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6126AB51F065B57000493BA /* SmallAppCell.swift */; };
+		C628AFB01F097B60002645CA /* AppDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628AFAF1F097B60002645CA /* AppDescriptionCell.swift */; };
+		C628AFB31F098F43002645CA /* RatingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628AFB21F098F43002645CA /* RatingsViewCell.swift */; };
+		C628AFB51F098F5E002645CA /* RatingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628AFB41F098F5E002645CA /* RatingCollectionViewCell.swift */; };
+		C628AFB71F0990A6002645CA /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628AFB61F0990A6002645CA /* Review.swift */; };
+		C628AFB91F09AD37002645CA /* UpdateSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628AFB81F09AD37002645CA /* UpdateSearchConfigurator.swift */; };
 		C62D7A431F044FC500A60799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A421F044FC500A60799 /* AppDelegate.swift */; };
 		C62D7A451F044FC500A60799 /* TabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A441F044FC500A60799 /* TabsController.swift */; };
 		C62D7A4A1F044FC500A60799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62D7A491F044FC500A60799 /* Assets.xcassets */; };
@@ -61,6 +66,11 @@
 		C6126AB11F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGHorizontalLinearFlowLayout.swift; sourceTree = "<group>"; };
 		C6126AB31F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingCollectionViewFlowlayout.swift; sourceTree = "<group>"; };
 		C6126AB51F065B57000493BA /* SmallAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAppCell.swift; sourceTree = "<group>"; };
+		C628AFAF1F097B60002645CA /* AppDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDescriptionCell.swift; sourceTree = "<group>"; };
+		C628AFB21F098F43002645CA /* RatingsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsViewCell.swift; sourceTree = "<group>"; };
+		C628AFB41F098F5E002645CA /* RatingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingCollectionViewCell.swift; sourceTree = "<group>"; };
+		C628AFB61F0990A6002645CA /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C628AFB81F09AD37002645CA /* UpdateSearchConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSearchConfigurator.swift; sourceTree = "<group>"; };
 		C62D7A3F1F044FC500A60799 /* AppStore iOS 10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore iOS 10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D7A421F044FC500A60799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C62D7A441F044FC500A60799 /* TabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsController.swift; sourceTree = "<group>"; };
@@ -145,6 +155,71 @@
 			name = FeaturedAppCells;
 			sourceTree = "<group>";
 		};
+		C628AFA91F097A74002645CA /* ScreenshotsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C6A8C2361F0912C2001C98A0 /* ScreenShotViewCell.swift */,
+				C6A8C2381F0913D0001C98A0 /* ScreenShotsHolderCell.swift */,
+			);
+			name = ScreenshotsCell;
+			sourceTree = "<group>";
+		};
+		C628AFAA1F097AB7002645CA /* BigAppGamesView */ = {
+			isa = PBXGroup;
+			children = (
+				C6D1C58F1F04CFE900D70D57 /* HorizontalBigAppCell.swift */,
+				C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */,
+			);
+			name = BigAppGamesView;
+			sourceTree = "<group>";
+		};
+		C628AFAB1F097AD8002645CA /* SmallAppGameCells */ = {
+			isa = PBXGroup;
+			children = (
+				C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */,
+				C6126AB51F065B57000493BA /* SmallAppCell.swift */,
+			);
+			name = SmallAppGameCells;
+			sourceTree = "<group>";
+		};
+		C628AFAC1F097AE7002645CA /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */,
+				C60E4A111F066274001A8BEB /* DividerFooter.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		C628AFAD1F097AF1002645CA /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */,
+				C62D7A5D1F0459CA00A60799 /* GamesController.swift */,
+				C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */,
+				C62D7A611F0459F900A60799 /* UpdatesViewController.swift */,
+				C62D7A631F045A0400A60799 /* SearchViewController.swift */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		C628AFAE1F097B3B002645CA /* AppDescCell */ = {
+			isa = PBXGroup;
+			children = (
+				C628AFAF1F097B60002645CA /* AppDescriptionCell.swift */,
+			);
+			name = AppDescCell;
+			sourceTree = "<group>";
+		};
+		C628AFB11F098EE8002645CA /* RatingsAndReviews */ = {
+			isa = PBXGroup;
+			children = (
+				C628AFB21F098F43002645CA /* RatingsViewCell.swift */,
+				C628AFB41F098F5E002645CA /* RatingCollectionViewCell.swift */,
+			);
+			name = RatingsAndReviews;
+			sourceTree = "<group>";
+		};
 		C62D7A361F044FC500A60799 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +262,8 @@
 				C6D1C58C1F04CCE800D70D57 /* HeaderItem.swift */,
 				C60E4A161F0688CE001A8BEB /* App.swift */,
 				C60E4A181F068D54001A8BEB /* TodayArticle.swift */,
+				C628AFB61F0990A6002645CA /* Review.swift */,
+				C628AFB81F09AD37002645CA /* UpdateSearchConfigurator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,11 +274,7 @@
 				C6B8C9D41F07E20000391BBD /* Delegates */,
 				C6B8C9CF1F07C14A00391BBD /* SuperClasses */,
 				C62D7A441F044FC500A60799 /* TabsController.swift */,
-				C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */,
-				C62D7A5D1F0459CA00A60799 /* GamesController.swift */,
-				C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */,
-				C62D7A611F0459F900A60799 /* UpdatesViewController.swift */,
-				C62D7A631F045A0400A60799 /* SearchViewController.swift */,
+				C628AFAD1F097AF1002645CA /* Tabs */,
 				C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */,
 			);
 			name = Controller;
@@ -210,16 +283,14 @@
 		C62D7A5A1F04596E00A60799 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C628AFB11F098EE8002645CA /* RatingsAndReviews */,
+				C628AFAE1F097B3B002645CA /* AppDescCell */,
 				C6D1C58E1F04CF9700D70D57 /* CustomViews */,
-				C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */,
-				C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */,
+				C628AFAC1F097AE7002645CA /* Misc */,
+				C628AFAB1F097AD8002645CA /* SmallAppGameCells */,
 				C60E4A1C1F06B798001A8BEB /* FeaturedAppCells */,
-				C6D1C58F1F04CFE900D70D57 /* HorizontalBigAppCell.swift */,
-				C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */,
-				C6126AB51F065B57000493BA /* SmallAppCell.swift */,
-				C60E4A111F066274001A8BEB /* DividerFooter.swift */,
-				C6A8C2361F0912C2001C98A0 /* ScreenShotViewCell.swift */,
-				C6A8C2381F0913D0001C98A0 /* ScreenShotsHolderCell.swift */,
+				C628AFAA1F097AB7002645CA /* BigAppGamesView */,
+				C628AFA91F097A74002645CA /* ScreenshotsCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -389,6 +460,7 @@
 			files = (
 				C60E4A141F067CD9001A8BEB /* SmallAppListHolderCell.swift in Sources */,
 				C6A8C2391F0913D0001C98A0 /* ScreenShotsHolderCell.swift in Sources */,
+				C628AFB51F098F5E002645CA /* RatingCollectionViewCell.swift in Sources */,
 				C60E4A121F066274001A8BEB /* DividerFooter.swift in Sources */,
 				C6126AB21F063B7F000493BA /* LGHorizontalLinearFlowLayout.swift in Sources */,
 				C62D7A681F046B5200A60799 /* TodayAppsDataSource.swift in Sources */,
@@ -396,10 +468,12 @@
 				C6D1C58B1F04CBE500D70D57 /* GamesDataSource.swift in Sources */,
 				C6D1C5901F04CFE900D70D57 /* HorizontalBigAppCell.swift in Sources */,
 				C6126AB61F065B57000493BA /* SmallAppCell.swift in Sources */,
+				C628AFB31F098F43002645CA /* RatingsViewCell.swift in Sources */,
 				C6B8C9D61F07E22400391BBD /* OnAppSelectedDelegate.swift in Sources */,
 				C62D7A551F04568900A60799 /* Extension.swift in Sources */,
 				C666F5021F06FAB600F6771C /* FeaturedAppCellBottomApp.swift in Sources */,
 				C64A1BD31F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift in Sources */,
+				C628AFB01F097B60002645CA /* AppDescriptionCell.swift in Sources */,
 				C6126AB41F0655EF000493BA /* SnappingCollectionViewFlowlayout.swift in Sources */,
 				C62D7A6C1F047CA300A60799 /* ElevatedImageView.swift in Sources */,
 				C6126AAF1F06238F000493BA /* CustomCollectionViewCell.swift in Sources */,
@@ -409,8 +483,10 @@
 				C6B8C9D11F07C18200391BBD /* BaseSectionedListController.swift in Sources */,
 				C60E4A191F068D54001A8BEB /* TodayArticle.swift in Sources */,
 				C62D7A621F0459F900A60799 /* UpdatesViewController.swift in Sources */,
+				C628AFB71F0990A6002645CA /* Review.swift in Sources */,
 				C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */,
 				C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */,
+				C628AFB91F09AD37002645CA /* UpdateSearchConfigurator.swift in Sources */,
 				C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */,
 				C6A8C2351F08F2F5001C98A0 /* Utils.swift in Sources */,
 				C6A8C23C1F091715001C98A0 /* Constants.swift in Sources */,

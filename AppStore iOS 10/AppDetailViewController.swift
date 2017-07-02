@@ -17,10 +17,10 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
     var collectionView : UICollectionView = {
         let layout = SnappingCollectionViewLayout()
         layout.minimumLineSpacing = 0
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.decelerationRate = UIScrollViewDecelerationRateFast
-        cv.showsHorizontalScrollIndicator = false
+        cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .white
         return cv
     }()
@@ -39,7 +39,6 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
             if let price = app?.appCategory{
                 let attributedString = NSMutableAttributedString(string: price, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.white])
                 getBtn.setAttributedTitle(attributedString, for: .normal)
-                //getBtn.setTitle(price, for: .normal)
             }
             if let rating = app?.appRating{
                 ratingBar.rating = rating
@@ -55,7 +54,6 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
                 Service.sharedInstance.getAppDetails(appID: appID, completed: { (application) in
                     self.collectionViewAppCopy = application
                     self.collectionView.reloadData()
-                    print("GOT HERE 1")
                 })
             }
             
@@ -194,13 +192,7 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        if let navBar = self.navigationController?.navigationBar{
-            navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            navBar.shadowImage = UIImage()
-            navBar.isTranslucent = false
-            navBar.backgroundColor = .white
-            
-        }
+        setUpNavBar()
         
         // Do any additional setup after loading the view.
 
@@ -212,16 +204,25 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        if section != -1{
+            return 1
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if(indexPath.section == 0){
-           return CGSize(width: collectionView.frame.width, height: 300)
+           return CGSize(width: collectionView.frame.width, height: 350)
+        }else if(indexPath.section == 1){
+            return CGSize(width: collectionView.frame.width, height: 250)
+        }
+        else if(indexPath.section == 2){
+            print(app?.appDesc)
+            return CGSize(width: collectionView.frame.width, height: 450)
         }
         
         return .zero
@@ -230,49 +231,45 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0{
-            print("GOT HERE 2")
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: screenShotCellID, for: indexPath) as? ScreenShotsHolderCell{
-                print("GOT HERE 3")
                 cell.screenShotURLS = collectionViewAppCopy?.screenShots
-                
                 return cell
             }
         }
         
+        if indexPath.section == 1{
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reviewsCellID, for: indexPath) as? RatingCollectionViewCell{
+                cell.reviews = collectionViewAppCopy?.appReviews
+                return cell
+            }
+        }
+        
+        if indexPath.section == 2{
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: descCellID, for: indexPath) as? AppDescriptionCell{
+                print("GOT TO SECTION 2")
+                cell.appDesc = collectionViewAppCopy?.appDesc
+                return cell
+            }
+        }
+    
         
         return UICollectionViewCell() 
     }
     
     let screenShotCellID = "screenShotCellID"
-    
+    let descCellID = "descCellID"
+    let reviewsCellID = "reviewsCellID"
+
     func setUpCollectionView() {
         view.addSubview(collectionView)
         collectionView.register(ScreenShotsHolderCell.self, forCellWithReuseIdentifier: screenShotCellID)
+        collectionView.register(AppDescriptionCell.self, forCellWithReuseIdentifier: descCellID)
+        collectionView.register(RatingCollectionViewCell.self, forCellWithReuseIdentifier: reviewsCellID)
         collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerID)
-        collectionView.anchor(headerBG.bottomAnchor, left: self.view.leftAnchor, bottom: self.view.bottomAnchor, right: self.view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        collectionView.anchor(headerBG.bottomAnchor, left: self.view.leftAnchor, bottom: self.view.bottomAnchor, right: self.view.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         self.automaticallyAdjustsScrollViewInsets = false
-        collectionView.contentInset = UIEdgeInsetsMake(-90, 8, 8, 8)
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        var footer : UICollectionViewCell
-        
-        if(kind == UICollectionElementKindSectionFooter){
-            if let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerID, for: indexPath) as? DividerFooter{
-                footer.smallSectionDivider = false
-                return footer
-            }
-        }
-        
-        return UICollectionViewCell()
-    }
-
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 25)
     }
     
     func setupHeaderView() {

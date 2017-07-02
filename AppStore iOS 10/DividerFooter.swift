@@ -36,8 +36,5 @@ class DividerFooter: DatasourceCell {
         addSubview(divider)
         
         
-        
-        
-        
     }
 }

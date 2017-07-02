@@ -55,10 +55,9 @@ class Service: NSObject {
             //print(response)
             
             if let result  = response.result.value as? Dictionary<String, Any>{
-                
+                var app = App()
                 if let allData = result["content"] as? Dictionary<String, Any>{
                     if let article = allData["store_info"] as? Dictionary<String, Any>{
-                        var app = App()
                         app.appName = article["title"] as! String!
                         app.appDesc = article["description"] as! String!
                         app.appPhoto = article["icon"] as! String!
@@ -74,9 +73,41 @@ class Service: NSObject {
                                 app.screenShots = screens
                             }
                         }
-                        application = app
+                        
+                       
+                        
                     }
-    
+                    
+                    var reviews = [Review]()
+                    if let reviewsDict = allData["reviews"] as? [Dictionary<String, Any>]{
+                        print("I AM HERE")
+                        for reviewJSON in reviewsDict{
+                            var review = Review()
+                            review.author = reviewJSON["author"] as! String
+                            
+                            //Skipped some reviews for pleasing aesthetics
+                            if let title = reviewJSON["title"] as? String{
+                                review.title = title
+                            }else{
+                                continue
+                            }
+                            
+                            if let content = reviewJSON["content"] as? String{
+                                if content.characters.count < 100 {
+                                    continue
+                                }
+                                review.content = content
+                            }else{
+                                continue
+                            }
+                            //review.version = reviewJSON["version"] as! String
+                            review.date = reviewJSON["date"] as! String
+                            review.rating = reviewJSON["rating"] as! Double
+                            reviews.append(review)
+                        }
+                        app.appReviews = reviews
+                    }
+                    application = app
                 }
             }
             

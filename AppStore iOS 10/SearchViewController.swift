@@ -10,9 +10,14 @@ import UIKit
 
 class SearchViewController: UINavigationController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpNavBar()
+        self.title = "Search"
         // Do any additional setup after loading the view.
     }
 

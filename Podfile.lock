@@ -3,19 +3,22 @@ PODS:
   - Cosmos (10.0.0)
   - Kingfisher (3.10.2)
   - LBTAComponents (0.1.9)
+  - ReadMoreTextView (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Cosmos (~> 10.0)
   - Kingfisher (~> 3.0)
   - LBTAComponents
+  - ReadMoreTextView
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Cosmos: bb9310e73ad1ad472b183b848b959302c569cf09
   Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
   LBTAComponents: 9a5d314080d1f80208062ccc81a2d25225c5f572
+  ReadMoreTextView: aefb9ffe11922c87fd39a09a988d7cc74c8438ba
 
-PODFILE CHECKSUM: 1dab0c3b1993b93e35c998a9146e1cd5dff8c2bd
+PODFILE CHECKSUM: b59f5e5ce5885d0e1c14466c9d71675eba9fbe38
 
 COCOAPODS: 1.2.1
