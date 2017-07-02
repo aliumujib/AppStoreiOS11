@@ -40,9 +40,9 @@ class GamesController: DatasourceController, OnAppSelectedDelegate {
     }
     
     func setSelectedApp(app: App) {
-        print("RECIEVED")
         let appDetailVC = AppDetailViewController()
-        navigationController?.pushViewController(appDetailVC, animated: true)
+        appDetailVC.app = app
+        self.show(appDetailVC, sender: appDetailVC)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

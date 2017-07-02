@@ -18,13 +18,13 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Create Tab one
         let tabOne = TodaysAppsController()
         let tabOneBarItem = UITabBarItem(title: "Today", image: UIImage(named: "today"), selectedImage: UIImage(named: "today")?.maskWithColor(color: .blue))
-        
         
         // Create Tab two
         let tabTwo = GamesController()
@@ -47,16 +47,21 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         tabThree.tabBarItem = tabThreeBarItem
         tabFour.tabBarItem = tabFourBarItem
         tabFive.tabBarItem = tabFiveBarItem
-
         
+        self.automaticallyAdjustsScrollViewInsets = false
+
         self.viewControllers = [tabOne, tabTwo, tabThree, tabFour, tabFive]
+        hideNavBar()
     }
+    
     
     // UITabBarControllerDelegate method
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        //print("Selected \(viewController.title!)")
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        showNavBar()
+    }
 
 }
 

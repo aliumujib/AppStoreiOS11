@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.5.0)
+  - Cosmos (10.0.0)
   - Kingfisher (3.10.2)
   - LBTAComponents (0.1.9)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - Cosmos (~> 10.0)
   - Kingfisher (~> 3.0)
   - LBTAComponents
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Cosmos: bb9310e73ad1ad472b183b848b959302c569cf09
   Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
   LBTAComponents: 9a5d314080d1f80208062ccc81a2d25225c5f572
 
-PODFILE CHECKSUM: e400543438364bd564af9d0e0d1b933fdfde8621
+PODFILE CHECKSUM: 1dab0c3b1993b93e35c998a9146e1cd5dff8c2bd
 
 COCOAPODS: 1.2.1

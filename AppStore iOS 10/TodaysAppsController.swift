@@ -31,6 +31,17 @@ class TodaysAppsController: DatasourceController  {
     }
     
     
+    func setSelectedApp(app: App?) {
+        let app1 = App(appName: "Geometrics", appDesc: "Explore Architecture around you", appID: 1, appCategory: "Leisure", appPrice: 0, appStory:"123", appPhoto: "geometrics", screenShots: [""])
+        let appDetailVC = AppDetailViewController()
+        appDetailVC.app = app1
+        self.show(appDetailVC, sender: appDetailVC)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        setSelectedApp(app: nil)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -92,7 +103,7 @@ class TodaysAppsController: DatasourceController  {
         if(kind == UICollectionElementKindSectionHeader){
             header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell)!
             
-            let headerItem = HeaderItem(smallTitle: "Monday, June 5".uppercased(), bigTitle: "App", hideDiv: true)
+            let headerItem = HeaderItem(smallTitle: "Monday, June 5".uppercased(), bigTitle: "Today", hideDiv: true)
             header.headerItem = headerItem
             //header.hideDivider()
             

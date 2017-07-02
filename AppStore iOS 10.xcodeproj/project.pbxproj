@@ -35,6 +35,7 @@
 		C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A6D1F047D2900A60799 /* CardView.swift */; };
 		C64A1BD31F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */; };
 		C666F5021F06FAB600F6771C /* FeaturedAppCellBottomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */; };
+		C6A8C2351F08F2F5001C98A0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8C2341F08F2F5001C98A0 /* Utils.swift */; };
 		C6B8C9D11F07C18200391BBD /* BaseSectionedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */; };
 		C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */; };
 		C6B8C9D61F07E22400391BBD /* OnAppSelectedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */; };
@@ -75,6 +76,7 @@
 		C62D7A6D1F047D2900A60799 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C64A1BD21F04E64800894D91 /* LargePhotoHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargePhotoHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		C666F5011F06FAB600F6771C /* FeaturedAppCellBottomApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppCellBottomApp.swift; sourceTree = "<group>"; };
+		C6A8C2341F08F2F5001C98A0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C6B8C9D01F07C18200391BBD /* BaseSectionedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionedListController.swift; sourceTree = "<group>"; };
 		C6B8C9D21F07E15800391BBD /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
 		C6B8C9D51F07E22400391BBD /* OnAppSelectedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnAppSelectedDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C62D7A541F04568900A60799 /* Extension.swift */,
 				C6D1C5891F04C4B800D70D57 /* UIImage_AverageColor.h */,
 				C6D1C5881F04C4B800D70D57 /* AppStore iOS 10-Bridging-Header.h */,
+				C6A8C2341F08F2F5001C98A0 /* Utils.swift */,
 			);
 			path = "AppStore iOS 10";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */,
 				C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */,
 				C6B8C9D31F07E15800391BBD /* AppDetailViewController.swift in Sources */,
+				C6A8C2351F08F2F5001C98A0 /* Utils.swift in Sources */,
 				C6D1C58D1F04CCE800D70D57 /* HeaderItem.swift in Sources */,
 				C62D7A601F0459EB00A60799 /* AppsViewController.swift in Sources */,
 				C62D7A451F044FC500A60799 /* TabsController.swift in Sources */,

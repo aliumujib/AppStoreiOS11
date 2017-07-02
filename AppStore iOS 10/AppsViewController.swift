@@ -48,7 +48,7 @@ class AppsViewController: DatasourceController {
             
             if let header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell){
                 
-                let headerItem = HeaderItem(smallTitle: "\t".uppercased(), bigTitle: "Games", hideDiv: false)
+                let headerItem = HeaderItem(smallTitle: "\t".uppercased(), bigTitle: "Apps", hideDiv: false)
                 header.headerItem = headerItem
                 
                 return header

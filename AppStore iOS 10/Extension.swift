@@ -49,6 +49,23 @@ extension UIImage {
     }
 }
 
+extension UIViewController{
+    
+    func statusBarHeight() -> CGFloat {
+        let statusBarSize = UIApplication.shared.statusBarFrame.size
+        return Swift.min(statusBarSize.width, statusBarSize.height)
+    }
+    
+    func hideNavBar() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func showNavBar() {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+}
+
 extension UIView {
     
     func materialize()  {

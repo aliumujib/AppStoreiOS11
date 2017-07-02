@@ -72,12 +72,10 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
     }
     
     func getData(searchTerm: String) {
-        let headers: HTTPHeaders = [
-            "X-Apptweak-Key": "JuaQBDWpUSBGj6HSKG4sMQNOUfI"]
-        
+        let headers: HTTPHeaders = ["X-Apptweak-Key": "ZZtdPAFn2e4TlvAqQZ_9TTlZlx4"]
         Alamofire.request("https://api.apptweak.com/ios/searches.json?term=\(searchTerm)&country=us&language=us&device=iphone", headers: headers).responseJSON { response in
             
-            print(response)
+            //print(response)
             
             if let result  = response.result.value as? Dictionary<String, Any>{
                 
@@ -90,6 +88,7 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
                             app.appPhoto = article["icon"] as! String!
                             app.appID = article["id"] as! Int!
                             app.appCategory = article["price"] as! String!
+                            app.appRating = article["rating"] as! Double
                             self.apps.append(app)
                         }
                         self.collectionView.reloadData()
