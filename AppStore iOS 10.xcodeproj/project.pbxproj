@@ -29,8 +29,7 @@
 		C62D7A4D1F044FC500A60799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D7A4B1F044FC500A60799 /* LaunchScreen.storyboard */; };
 		C62D7A551F04568900A60799 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A541F04568900A60799 /* Extension.swift */; };
 		C62D7A5C1F0459B400A60799 /* TodaysAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */; };
-		C62D7A5E1F0459CA00A60799 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5D1F0459CA00A60799 /* GamesController.swift */; };
-		C62D7A601F0459EB00A60799 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */; };
+		C62D7A5E1F0459CA00A60799 /* GamesAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5D1F0459CA00A60799 /* GamesAppsController.swift */; };
 		C62D7A621F0459F900A60799 /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A611F0459F900A60799 /* UpdatesViewController.swift */; };
 		C62D7A641F045A0400A60799 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A631F045A0400A60799 /* SearchViewController.swift */; };
 		C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */; };
@@ -79,8 +78,7 @@
 		C62D7A4E1F044FC500A60799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62D7A541F04568900A60799 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaysAppsController.swift; sourceTree = "<group>"; };
-		C62D7A5D1F0459CA00A60799 /* GamesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
-		C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		C62D7A5D1F0459CA00A60799 /* GamesAppsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesAppsController.swift; sourceTree = "<group>"; };
 		C62D7A611F0459F900A60799 /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesViewController.swift; sourceTree = "<group>"; };
 		C62D7A631F045A0400A60799 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralHeaderCell.swift; sourceTree = "<group>"; };
@@ -195,8 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */,
-				C62D7A5D1F0459CA00A60799 /* GamesController.swift */,
-				C62D7A5F1F0459EB00A60799 /* AppsViewController.swift */,
+				C62D7A5D1F0459CA00A60799 /* GamesAppsController.swift */,
 				C62D7A611F0459F900A60799 /* UpdatesViewController.swift */,
 				C62D7A631F045A0400A60799 /* SearchViewController.swift */,
 			);
@@ -491,10 +488,9 @@
 				C6A8C2351F08F2F5001C98A0 /* Utils.swift in Sources */,
 				C6A8C23C1F091715001C98A0 /* Constants.swift in Sources */,
 				C6D1C58D1F04CCE800D70D57 /* HeaderItem.swift in Sources */,
-				C62D7A601F0459EB00A60799 /* AppsViewController.swift in Sources */,
 				C62D7A451F044FC500A60799 /* TabsController.swift in Sources */,
 				C6A8C2371F0912C2001C98A0 /* ScreenShotViewCell.swift in Sources */,
-				C62D7A5E1F0459CA00A60799 /* GamesController.swift in Sources */,
+				C62D7A5E1F0459CA00A60799 /* GamesAppsController.swift in Sources */,
 				C60E4A1B1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift in Sources */,
 				C60E4A171F0688CE001A8BEB /* App.swift in Sources */,
 				C62D7A6A1F046F0B00A60799 /* FeaturedAppCardCell.swift in Sources */,

@@ -14,9 +14,12 @@ class GeneralHeaderCell: DatasourceCell {
     var headerItem : HeaderItem? {
     
         didSet{
-        smallTitle.text = headerItem?.smalltitle
-        bigTitle.text = headerItem?.bigTitle
-        divider.isHidden = (headerItem?.hideDivider)!
+            smallTitle.text = headerItem?.smalltitle
+            bigTitle.text = headerItem?.bigTitle
+                if let hide = headerItem?.hideDivider{
+                    divider.isHidden = hide
+                }
+            //backgroundColor = .red
         }
     
     }

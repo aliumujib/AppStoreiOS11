@@ -40,9 +40,7 @@ class BaseSectionedListController: DatasourceController {
     
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        var header : UICollectionViewCell
-        
+                
         if(kind == UICollectionElementKindSectionHeader){
             
             if let header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell){

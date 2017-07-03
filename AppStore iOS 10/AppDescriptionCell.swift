@@ -81,7 +81,7 @@ class AppDescriptionCell: UICollectionViewCell {
         
         titleLbl.anchor(topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 12, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        readMoreTextView.anchor(titleLbl.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 400)
+        readMoreTextView.anchor(titleLbl.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 400)
         
         developerTextView.anchor(readMoreTextView.bottomAnchor, left: readMoreTextView.leftAnchor, bottom: nil, right: rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)
         

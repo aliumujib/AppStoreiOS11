@@ -84,7 +84,7 @@ class RatingsViewCell: UICollectionViewCell {
         
         titleLbl.anchor(reviewBg.topAnchor, left: reviewBg.leftAnchor, bottom: nil, right: reviewBg.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 0)
         ratingBar.anchor(titleLbl.bottomAnchor, left: titleLbl.leftAnchor, bottom: nil, right: nil, topConstant: 4, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-        reviewContent.anchor(ratingBar.bottomAnchor, left: titleLbl.leftAnchor, bottom: self.bottomAnchor, right: titleLbl.rightAnchor, topConstant: 4, leftConstant: 0, bottomConstant: 16, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        reviewContent.anchor(ratingBar.bottomAnchor, left: titleLbl.leftAnchor, bottom: self.bottomAnchor, right: titleLbl.rightAnchor, topConstant: 4, leftConstant: 0, bottomConstant: 32, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
 }

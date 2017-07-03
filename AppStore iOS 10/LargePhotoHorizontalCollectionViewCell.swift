@@ -27,6 +27,7 @@ class LargePhotoHorizontalCollectionViewCell: DatasourceCell, UICollectionViewDe
     
     var dummyData : [App]?{
         didSet{
+            print("SET dummyData")
             appData = NSArray(array: dummyData!, copyItems: true) as! [App]
             self.collectionView.reloadData()
         }

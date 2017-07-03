@@ -20,6 +20,7 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
             if let s = searchTerm{
                 Service.sharedInstance.getAppSearch(searchTerm: s, completed: {data in
                     self.apps = data
+                    print("GOT HERE 3")
                     self.collectionView.reloadData()
                 })
             }

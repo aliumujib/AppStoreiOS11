@@ -53,6 +53,7 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
             if let appID = app?.appID{
                 Service.sharedInstance.getAppDetails(appID: appID, completed: { (application) in
                     self.collectionViewAppCopy = application
+                    self.collectionView.collectionViewLayout.invalidateLayout()
                     self.collectionView.reloadData()
                 })
             }
@@ -186,12 +187,35 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         return appICo
     }()
     
+    private var headerHeightContraint: NSLayoutConstraint!
+    var screenheight : CGFloat!
+    var screenwidth : CGFloat!
     
+    var minHeight: CGFloat = 0.0
+    var maxHeight: CGFloat = 145
+    
+    var previousScrollOffset : CGFloat = 0.0
+    var headerHeightConstant: CGFloat!
+
+    var fadables = [UIView]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        screenheight = self.view.frame.size.height
+        screenwidth = self.view.frame.size.width
+        
+        //setupVoiews to be faded during collapse
+        fadables.append(appIcon)
+        fadables.append(appDetails)
+        fadables.append(getBtn)
+        fadables.append(ratingBar)
+        fadables.append(ratingValue)
+        fadables.append(versionTV)
+        fadables.append(ageTV)
+        fadables.append(ratingValue)
+
         setUpNavBar()
         
         // Do any additional setup after loading the view.
@@ -199,9 +223,63 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         setupHeaderView()
         setUpCollectionView()
         
-        
+        print("FIRST HEADER HEIGHT \(maxHeight)")
+        self.headerHeightConstant = self.maxHeight
         
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
+        let absoluteTop: CGFloat = 0;
+        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height;
+        
+        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
+        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
+        //
+        // Will implement header height logic here next
+        //
+        self.previousScrollOffset = scrollView.contentOffset.y
+        
+        var newHeight = self.headerHeightConstant
+        
+        if isScrollingDown {
+            newHeight = max(self.minHeight, self.headerHeightConstant - abs(scrollDiff))
+        } else if isScrollingUp {
+            newHeight = min(self.maxHeight, self.headerHeightConstant + abs(scrollDiff))
+        }
+        
+        if newHeight != self.headerHeightConstant {
+            self.headerHeightConstant = newHeight
+        }
+        
+//        if (newHeight?.isLessThanOrEqualTo(50))!{
+//            self.navigationController?.title = collectionViewAppCopy?.appName
+//        }else{
+//            self.navigationController?.title = ""
+//        }
+        
+        print("NEW HEADER HEIGHT \(newHeight)")
+        
+        let range = self.maxHeight - self.minHeight
+        let openAmount = self.headerHeightConstant - self.minHeight
+        
+        headerBG.frame = CGRect(x: headerBG.frame.origin.x, y: headerBG.frame.origin.y, width: screenwidth, height: openAmount)
+        
+        collectionView.frame = CGRect(x: 0, y: headerBG.frame.origin.y + headerBG.frame.size.height, width: screenwidth, height: screenheight - headerBG.frame.size.height)
+        
+        print("\(headerBG.frame)")
+        let percentage = openAmount / range
+        
+        
+        fadeViews(views: fadables, fadepercent: percentage)
+    }
+    
+    func fadeViews(views: [UIView], fadepercent: CGFloat) {
+        for view in views{
+            view.alpha = fadepercent
+        }
+    }
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -218,10 +296,12 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         if(indexPath.section == 0){
            return CGSize(width: collectionView.frame.width, height: 350)
         }else if(indexPath.section == 1){
-            return CGSize(width: collectionView.frame.width, height: 250)
+            if let count = collectionViewAppCopy?.appReviews?.count , count != 0{
+                return CGSize(width: collectionView.frame.width, height: 255)
+            }
         }
         else if(indexPath.section == 2){
-            print(app?.appDesc)
+            //print(app?.appDesc)
             return CGSize(width: collectionView.frame.width, height: 450)
         }
         

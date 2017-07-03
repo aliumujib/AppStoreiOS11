@@ -10,11 +10,14 @@ import Foundation
 
 struct ViewControllerConfigurator {
     
-    let title: String?
-    let seachTerm: String?
-    let showSearchBar: Bool?
-    let headerItem: HeaderItem?
-    let listArray: [String]?
+    var title: String?
+    var seachTerm: String?
+    var showSearchBar: Bool?
+    var headerItem: HeaderItem?
+    var listArray: [String]?
+    var appsArray : [App]?
     
-    
+    init() {
+        
+    }
 }
