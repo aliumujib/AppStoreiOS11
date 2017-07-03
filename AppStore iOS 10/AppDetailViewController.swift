@@ -257,9 +257,7 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
 //        }else{
 //            self.navigationController?.title = ""
 //        }
-        
-        print("NEW HEADER HEIGHT \(newHeight)")
-        
+                
         let range = self.maxHeight - self.minHeight
         let openAmount = self.headerHeightConstant - self.minHeight
         

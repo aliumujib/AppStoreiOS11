@@ -35,11 +35,11 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         let tabThreeBarItem = UITabBarItem(title: "Apps", image: UIImage(named: "apps"), selectedImage: UIImage(named: "apps")?.maskWithColor(color: .blue))
         
         // Create Tab 4
-        let tabFour = UpdatesViewController()
+        let tabFour = SearchUpdatesViewController()
         let tabFourBarItem = UITabBarItem(title: "Updates", image: UIImage(named: "updates"), selectedImage: UIImage(named: "updates")?.maskWithColor(color: .blue))
         
         // Create Tab 5
-        let tabFive = SearchViewController()
+        let tabFive = SearchUpdatesViewController()
         let tabFiveBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), selectedImage: UIImage(named: "search")?.maskWithColor(color: .blue))
         
         tabOne.tabBarItem = tabOneBarItem

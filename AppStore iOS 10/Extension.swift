@@ -70,7 +70,6 @@ extension UIViewController{
             navBar.shadowImage = UIImage()
             navBar.isTranslucent = false
             navBar.backgroundColor = .white
-            
         }
     }
     

@@ -20,7 +20,6 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
             if let s = searchTerm{
                 Service.sharedInstance.getAppSearch(searchTerm: s, completed: {data in
                     self.apps = data
-                    print("GOT HERE 3")
                     self.collectionView.reloadData()
                 })
             }
@@ -71,7 +70,6 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let app = apps[indexPath.row]
-        print("SENT")
         appSelectedDelegate?.setSelectedApp(app: app)
     }
     

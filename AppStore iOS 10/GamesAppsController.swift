@@ -14,23 +14,17 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
     var config : ViewControllerConfigurator? {
         didSet{
             if let config = config {
-                //print("SET config")
                 if let apps = config.appsArray{
                     self.apps = apps
-                   // print("SET apps \(self.apps.count)")
                 }
                 if let itemsArray = config.listArray {
                     self.items = itemsArray
-                    //print("SET items \(self.items.count)")
                 }
                 if let header = config.headerItem{
                     self.headerItem = header
-                   // print("SET header \(self.headerItem)")
                 }
                 
             }
-            
-            print("SET reloadData")
             self.collectionView.reloadData()
         }
     }
@@ -74,14 +68,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: NSStringFromClass(DividerFooter.self))
         
-        
-        print("NO ITEM: \(items.count)")
-        print("NO BIGAPPS: \(apps.count)")
-        print("HEADER: \(headerItem)")
-        
-
         self.collectionView.reloadData()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -141,14 +128,12 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
                 //USe the section to access array instead of
                 if(items.count > indexPath.item){
                     cell.searchTerm = items[indexPath.section - 1]
-                    print("GOT HERE 2")
                 }
                 cell.appSelectedDelegate = self
                 return cell
             }
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(LargePhotoHorizontalCollectionViewCell.self), for: indexPath) as! LargePhotoHorizontalCollectionViewCell
-            print("GOT HERE 1")
             cell.dummyData = apps
             return cell
         }
@@ -171,9 +156,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//        if(section != 0){
-//            return CGSize(width: view.frame.width, height: 25)
-//        }
+
         return CGSize(width: view.frame.width, height: 25)
     }
 

@@ -27,7 +27,6 @@ class LargePhotoHorizontalCollectionViewCell: DatasourceCell, UICollectionViewDe
     
     var dummyData : [App]?{
         didSet{
-            print("SET dummyData")
             appData = NSArray(array: dummyData!, copyItems: true) as! [App]
             self.collectionView.reloadData()
         }
@@ -37,9 +36,7 @@ class LargePhotoHorizontalCollectionViewCell: DatasourceCell, UICollectionViewDe
         addSubview(collectionView)
 
         self.backgroundColor = .white
-        
-        //dummyData = [app1, app2, app3]
-        
+                
         collectionView.fillSuperview()
         collectionView.register(HorizontalBigAppCell.self, forCellWithReuseIdentifier: cellID)
         

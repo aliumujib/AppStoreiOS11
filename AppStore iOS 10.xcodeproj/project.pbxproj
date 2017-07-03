@@ -30,8 +30,7 @@
 		C62D7A551F04568900A60799 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A541F04568900A60799 /* Extension.swift */; };
 		C62D7A5C1F0459B400A60799 /* TodaysAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */; };
 		C62D7A5E1F0459CA00A60799 /* GamesAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A5D1F0459CA00A60799 /* GamesAppsController.swift */; };
-		C62D7A621F0459F900A60799 /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A611F0459F900A60799 /* UpdatesViewController.swift */; };
-		C62D7A641F045A0400A60799 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A631F045A0400A60799 /* SearchViewController.swift */; };
+		C62D7A621F0459F900A60799 /* SearchUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A611F0459F900A60799 /* SearchUpdatesViewController.swift */; };
 		C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */; };
 		C62D7A681F046B5200A60799 /* TodayAppsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A671F046B5200A60799 /* TodayAppsDataSource.swift */; };
 		C62D7A6A1F046F0B00A60799 /* FeaturedAppCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D7A691F046F0B00A60799 /* FeaturedAppCardCell.swift */; };
@@ -79,8 +78,7 @@
 		C62D7A541F04568900A60799 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaysAppsController.swift; sourceTree = "<group>"; };
 		C62D7A5D1F0459CA00A60799 /* GamesAppsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesAppsController.swift; sourceTree = "<group>"; };
-		C62D7A611F0459F900A60799 /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesViewController.swift; sourceTree = "<group>"; };
-		C62D7A631F045A0400A60799 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C62D7A611F0459F900A60799 /* SearchUpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUpdatesViewController.swift; sourceTree = "<group>"; };
 		C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralHeaderCell.swift; sourceTree = "<group>"; };
 		C62D7A671F046B5200A60799 /* TodayAppsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayAppsDataSource.swift; sourceTree = "<group>"; };
 		C62D7A691F046F0B00A60799 /* FeaturedAppCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedAppCardCell.swift; sourceTree = "<group>"; };
@@ -194,8 +192,7 @@
 			children = (
 				C62D7A5B1F0459B400A60799 /* TodaysAppsController.swift */,
 				C62D7A5D1F0459CA00A60799 /* GamesAppsController.swift */,
-				C62D7A611F0459F900A60799 /* UpdatesViewController.swift */,
-				C62D7A631F045A0400A60799 /* SearchViewController.swift */,
+				C62D7A611F0459F900A60799 /* SearchUpdatesViewController.swift */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -475,11 +472,10 @@
 				C62D7A6C1F047CA300A60799 /* ElevatedImageView.swift in Sources */,
 				C6126AAF1F06238F000493BA /* CustomCollectionViewCell.swift in Sources */,
 				C62D7A5C1F0459B400A60799 /* TodaysAppsController.swift in Sources */,
-				C62D7A641F045A0400A60799 /* SearchViewController.swift in Sources */,
 				C60E4A1E1F06BBFA001A8BEB /* FeaturedAppCellWithBigAppIcon.swift in Sources */,
 				C6B8C9D11F07C18200391BBD /* BaseSectionedListController.swift in Sources */,
 				C60E4A191F068D54001A8BEB /* TodayArticle.swift in Sources */,
-				C62D7A621F0459F900A60799 /* UpdatesViewController.swift in Sources */,
+				C62D7A621F0459F900A60799 /* SearchUpdatesViewController.swift in Sources */,
 				C628AFB71F0990A6002645CA /* Review.swift in Sources */,
 				C62D7A661F04674A00A60799 /* GeneralHeaderCell.swift in Sources */,
 				C62D7A6E1F047D2900A60799 /* CardView.swift in Sources */,
