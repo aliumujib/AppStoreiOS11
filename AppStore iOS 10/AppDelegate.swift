@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = CustomNavigationController(rootViewController: TabsController())
         window?.makeKeyAndVisible()
         
+        //Change status bar color
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to: #selector(setter: UIView.backgroundColor)){
+            statusBar.backgroundColor = UIColor.white
+        }
         return true
     }
 

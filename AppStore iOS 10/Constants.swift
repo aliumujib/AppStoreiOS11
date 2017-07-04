@@ -9,7 +9,7 @@
 import Foundation
 
 
-let API_KEY = "d-5uU3XlSRXJaMupU2VMnm52MWQ"
+let API_KEY = "B7g4xfAldOmt9B1hxBhMNHZjd7Y"
 
 let BASE_URL = "https://api.apptweak.com/ios"
 let ARGUMENTS = "&country=us&language=us&device=iphone"
