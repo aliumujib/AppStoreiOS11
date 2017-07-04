@@ -1,5 +1,5 @@
 //
-//  UpdateSearchConfigurator.swift
+//  ViewControllerConfigurator.swift
 //  AppStore iOS 10
 //
 //  Created by Abdul-Mujeeb Aliu on 7/2/17.

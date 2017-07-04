@@ -19,7 +19,7 @@ class TodaysAppsController: DatasourceController  {
         collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
 
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
-            layout.sectionHeadersPinToVisibleBounds = true
+            layout.sectionHeadersPinToVisibleBounds = false
             layout.minimumInteritemSpacing = 1
             layout.minimumLineSpacing = 10
         }

@@ -51,7 +51,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
         collectionView.fillSuperview()
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionHeadersPinToVisibleBounds = true
+            layout.sectionHeadersPinToVisibleBounds = false
             collectionView.showsHorizontalScrollIndicator = false
             collectionView.setCollectionViewLayout(layout, animated: true)
         }

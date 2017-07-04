@@ -110,7 +110,7 @@ class SmallAppCell: DatasourceCell {
         addSubview(appDetails)
         addSubview(getBtn)
         addSubview(inAppText)
-        //addSubview(divider)
+        addSubview(divider)
         
         smallTitle.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
@@ -124,9 +124,7 @@ class SmallAppCell: DatasourceCell {
         
         inAppText.anchor(getBtn.topAnchor, left: getBtn.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 8, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        //divider.anchor(nil, left: imageBg.rightAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
-
-        
+                
     }
 
 }

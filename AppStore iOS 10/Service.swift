@@ -18,11 +18,12 @@ class Service: NSObject {
     }
     
     public func getAppSearch(searchTerm: String, completed: @escaping Completed) {
+        //print("PERFORMING SEARCH: \(searchTerm) at URL: \(getSearchURLForQuery(query: searchTerm))")
         var apps = [App]()
         let headers: HTTPHeaders = ["X-Apptweak-Key": API_KEY]
         Alamofire.request(getSearchURLForQuery(query: searchTerm), headers: headers).responseJSON { response in
             
-            //print(response)
+            //print(response.result.value)
             
             if let result  = response.result.value as? Dictionary<String, Any>{
                 

@@ -9,7 +9,8 @@
 import Foundation
 
 
-let API_KEY = "JK8_VMNL8TBtFNfvA_Mropzpkwk"
+let API_KEY = "d-5uU3XlSRXJaMupU2VMnm52MWQ"
+
 let BASE_URL = "https://api.apptweak.com/ios"
 let ARGUMENTS = "&country=us&language=us&device=iphone"
 let SEARCH_PATH = "/searches.json?term="

@@ -30,6 +30,8 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         return whiteBG
     }()
     
+    
+    
     var collectionViewAppCopy: App?
     
     var app: App? {
@@ -278,6 +280,15 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        if(self.navigationController?.isNavigationBarHidden)!{
+            showNavBar()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //hideNavBar()
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3

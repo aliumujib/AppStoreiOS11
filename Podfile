@@ -11,5 +11,6 @@ target 'AppStore iOS 10' do
   pod 'Kingfisher', '~> 3.0'
   pod 'Cosmos', '~> 10.0'
   pod 'ReadMoreTextView'
-  
+  pod 'AZSearchView'
+
 end

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - AZSearchView (1.0.3)
   - Cosmos (10.0.0)
   - Kingfisher (3.10.2)
   - LBTAComponents (0.1.9)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - AZSearchView
   - Cosmos (~> 10.0)
   - Kingfisher (~> 3.0)
   - LBTAComponents
@@ -14,11 +16,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AZSearchView: 4ed3266ff6b27c1131466ac2bcaaa499800b1a0b
   Cosmos: bb9310e73ad1ad472b183b848b959302c569cf09
   Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
   LBTAComponents: 9a5d314080d1f80208062ccc81a2d25225c5f572
   ReadMoreTextView: aefb9ffe11922c87fd39a09a988d7cc74c8438ba
 
-PODFILE CHECKSUM: b59f5e5ce5885d0e1c14466c9d71675eba9fbe38
+PODFILE CHECKSUM: a49ab09f7f3b85ec0d436d5c50f7bf14fe339a41
 
 COCOAPODS: 1.2.1

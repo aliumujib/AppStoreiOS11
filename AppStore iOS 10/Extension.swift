@@ -73,6 +73,15 @@ extension UIViewController{
         }
     }
     
+    func resetNavBar()  {
+        if let navBar = self.navigationController?.navigationBar{
+            navBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+            navBar.shadowImage = nil
+            navBar.isTranslucent = false
+            navBar.backgroundColor = .white
+        }
+    }
+    
 }
 
 

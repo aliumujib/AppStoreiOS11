@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AZSearchView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,6 +47,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1CC448FA91C72D6F76E3C22372C7AB3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>21E96CAC25BE651CAA4BDD3B3E44A06D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2F0C0F810568D3E82219429D9D870F04</key>
 		<dict>
 			<key>primary</key>
@@ -57,12 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F39F88EF2E52BF1019C77F3BE72455AC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FECF3EA81B88AD1AF82480B307473FA6</key>
+		<key>B9071EBD73D3A2B84836A3C5A3DE4CDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

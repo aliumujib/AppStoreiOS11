@@ -27,19 +27,19 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         let tabOneBarItem = UITabBarItem(title: "Today", image: UIImage(named: "today"), selectedImage: UIImage(named: "today")?.maskWithColor(color: .blue))
         
         // Create Tab two
-        var tabTwo = GamesAppsController()
+        let tabTwo = GamesAppsController()
         let tabTwoBarItem = UITabBarItem(title: "Games", image: UIImage(named: "games"), selectedImage: UIImage(named: "games")?.maskWithColor(color: .blue))
         
         // Create Tab three
-        var tabThree = GamesAppsController()
+        let tabThree = GamesAppsController()
         let tabThreeBarItem = UITabBarItem(title: "Apps", image: UIImage(named: "apps"), selectedImage: UIImage(named: "apps")?.maskWithColor(color: .blue))
         
         // Create Tab 4
-        let tabFour = SearchUpdatesViewController()
+        let tabFour = UpdatesViewController()
         let tabFourBarItem = UITabBarItem(title: "Updates", image: UIImage(named: "updates"), selectedImage: UIImage(named: "updates")?.maskWithColor(color: .blue))
         
         // Create Tab 5
-        let tabFive = SearchUpdatesViewController()
+        let tabFive = SearchViewController()
         let tabFiveBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), selectedImage: UIImage(named: "search")?.maskWithColor(color: .blue))
         
         tabOne.tabBarItem = tabOneBarItem
@@ -51,6 +51,7 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         self.automaticallyAdjustsScrollViewInsets = false
 
         self.viewControllers = [tabOne, tabTwo, tabThree, tabFour, tabFive]
+        
         hideNavBar()
         
         let items = ["angry","war", "clan"]
@@ -89,8 +90,7 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         configApp.headerItem = headerItemApps
         
         tabThree.config = configApp
-
-
+        
     }
     
     func createTabItems() {
