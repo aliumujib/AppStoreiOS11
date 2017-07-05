@@ -112,8 +112,9 @@ class SmallAppCell: DatasourceCell {
         addSubview(inAppText)
         addSubview(divider)
         
-        smallTitle.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        smallTitle.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 1)
         
+        seeAllText.isHidden = true
         seeAllText.anchor(smallTitle.topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 0)
         
         imageBg.anchor(smallTitle.bottomAnchor, left: smallTitle.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 0, bottomConstant: 16, rightConstant: 8, widthConstant: 70, heightConstant: 70)

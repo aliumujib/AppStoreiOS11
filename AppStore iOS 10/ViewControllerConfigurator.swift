@@ -16,6 +16,7 @@ struct ViewControllerConfigurator {
     var headerItem: HeaderItem?
     var listArray: [String]?
     var appsArray : [App]?
+    var subHeaderTitle: String?
     
     init() {
         

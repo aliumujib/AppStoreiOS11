@@ -23,7 +23,9 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
                 if let header = config.headerItem{
                     self.headerItem = header
                 }
-                
+                if let subheader = config.subHeaderTitle{
+                    self.subHeaderTitle = subheader
+                }
             }
             self.collectionView.reloadData()
         }
@@ -43,7 +45,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
     private   var items = [String]()
     private  var apps: [App] = [App]()
     private  var headerItem: HeaderItem!
-    
+    private var subHeaderTitle: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +70,8 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: NSStringFromClass(DividerFooter.self))
         
+        collectionView.register(SmallAppListHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: NSStringFromClass(SmallAppListHeader.self))
+        
         self.collectionView.reloadData()
     }
     
@@ -86,6 +90,15 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if(kind == UICollectionElementKindSectionHeader){
+            
+            if indexPath.section == 1{
+                if let header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(SmallAppListHeader.self), for: indexPath) as? SmallAppListHeader){
+                    
+                    header.title = subHeaderTitle
+                    return header
+                    
+                }
+            }
             
            if let header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell){
             
@@ -113,7 +126,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
         if(indexPath.section == 0){
             return CGSize(width: view.frame.width, height: 318)
         }
-        return CGSize(width: view.frame.width, height: 95)
+        return CGSize(width: view.frame.width, height: 85)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -144,6 +157,9 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if(section != 0){
+            if section == 1{
+                return CGSize(width: view.frame.width, height: 25)
+            }
             return .zero
         }
         return CGSize(width: view.frame.width, height: 95)
@@ -156,8 +172,10 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-
-        return CGSize(width: view.frame.width, height: 25)
+        if section == 0{
+            return CGSize(width: view.frame.width, height: 20)
+        }
+        return CGSize(width: view.frame.width, height: 10)
     }
 
 

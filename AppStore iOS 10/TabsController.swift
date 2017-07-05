@@ -69,7 +69,8 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         configGames.appsArray = apps
         configGames.listArray = items
         configGames.headerItem = headerItemGames
-        
+        configGames.subHeaderTitle = "New Games we love"
+
         tabTwo.config = configGames
         
         
@@ -88,6 +89,7 @@ class TabsController: UITabBarController, UITabBarControllerDelegate {
         configApp.appsArray = apps2
         configApp.listArray = items2
         configApp.headerItem = headerItemApps
+        configApp.subHeaderTitle = "New Apps we love"
         
         tabThree.config = configApp
         

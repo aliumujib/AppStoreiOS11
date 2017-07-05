@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68045C729709FE5F1E61A904 /* Pods_AppStore_iOS_10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F038A0B87F10F00176AD243D /* Pods_AppStore_iOS_10.framework */; };
+		C60B83051F0C70C9007EAD68 /* SmallAppListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B83041F0C70C9007EAD68 /* SmallAppListHeader.swift */; };
 		C60E4A121F066274001A8BEB /* DividerFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A111F066274001A8BEB /* DividerFooter.swift */; };
 		C60E4A141F067CD9001A8BEB /* SmallAppListHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */; };
 		C60E4A171F0688CE001A8BEB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E4A161F0688CE001A8BEB /* App.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		78F3CE854DCEC0B8D43D301C /* Pods-AppStore iOS 10.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore iOS 10.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStore iOS 10/Pods-AppStore iOS 10.release.xcconfig"; sourceTree = "<group>"; };
 		A4E6BBCAF0ED15650A9C6D74 /* Pods-AppStore iOS 10.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore iOS 10.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppStore iOS 10/Pods-AppStore iOS 10.debug.xcconfig"; sourceTree = "<group>"; };
+		C60B83041F0C70C9007EAD68 /* SmallAppListHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAppListHeader.swift; sourceTree = "<group>"; };
 		C60E4A111F066274001A8BEB /* DividerFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerFooter.swift; sourceTree = "<group>"; };
 		C60E4A131F067CD9001A8BEB /* SmallAppListHolderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAppListHolderCell.swift; sourceTree = "<group>"; };
 		C60E4A161F0688CE001A8BEB /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				C62D7A651F04674A00A60799 /* GeneralHeaderCell.swift */,
+				C60B83041F0C70C9007EAD68 /* SmallAppListHeader.swift */,
 				C60E4A111F066274001A8BEB /* DividerFooter.swift */,
 			);
 			name = Misc;
@@ -499,6 +502,7 @@
 				C6A8C2371F0912C2001C98A0 /* ScreenShotViewCell.swift in Sources */,
 				C62D7A5E1F0459CA00A60799 /* GamesAppsController.swift in Sources */,
 				C60E4A1B1F06B771001A8BEB /* FeaturedAppTopWhiteBg.swift in Sources */,
+				C60B83051F0C70C9007EAD68 /* SmallAppListHeader.swift in Sources */,
 				C6B78E671F0B11FB00F111E3 /* CustomNavigationController.swift in Sources */,
 				C60E4A171F0688CE001A8BEB /* App.swift in Sources */,
 				C62D7A6A1F046F0B00A60799 /* FeaturedAppCardCell.swift in Sources */,

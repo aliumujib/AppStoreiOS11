@@ -76,7 +76,7 @@ class SmallListHolderCell: DatasourceCell, UICollectionViewDelegate, UICollectio
   
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width - 32, height: 95)
+        return CGSize(width: self.frame.width - 32, height: 85)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

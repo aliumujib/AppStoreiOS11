@@ -1,7 +1,7 @@
 # Appstore iOS 11
 So I was following Brian Voong's Appstore videos on letsbuildthatapp.com and I decided to turn things up a notch.. and this came about. Found the designs on dribble! I guess there's just a whole lot of dope stuff online... Basically a rough draft of the appstore freebie by Felix Lebedinzew (http://felix-lebedinzew.com/), The app store data is from apptweak.io , they have an awesome API.. I mean there's everything in their JSON responses. I learnt (the hard way) quite a lot about navigation controllers and how they work with the navigation bar, tab bars etc.
 
-
+<img src="Screens/MAIN3.gif" width="250" />
 <img src="Screens/MAIN2.gif" width="250" />
 <img src="Screens/MAIN1.gif" width="250" />
 
