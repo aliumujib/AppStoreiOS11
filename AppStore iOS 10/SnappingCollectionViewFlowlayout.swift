@@ -10,6 +10,10 @@ import UIKit
 
 class SnappingCollectionViewLayout: UICollectionViewFlowLayout {
     
+    /* I have no idea why this function works, but it does,
+     * so it's probably best to leave it alone unless you
+     * know how/why it works */
+    
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         guard let collectionView = collectionView else { return super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity) }
         

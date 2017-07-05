@@ -10,6 +10,7 @@ import UIKit
 
 open class LGHorizontalLinearFlowLayout: UICollectionViewFlowLayout {
     
+    
     fileprivate var lastCollectionViewSize: CGSize = CGSize.zero
     
     open var scalingOffset: CGFloat = 200 //for offsets >= scalingOffset scale factor is minimumScaleFactor
