@@ -5,20 +5,27 @@ So I was following Brian Voong's Appstore videos on letsbuildthatapp.com and I d
 <img src="Screens/MAIN2.gif" width="250" />
 <img src="Screens/MAIN1.gif" width="250" />
 
+
+## Installation
+- `git clone https://github.com/aliumujib/AppStoreiOS11`
+- `open AppStoreiOS11/AppStoreiOS11.xcworkspace`
+- open terminal `cd` to the directory and run `pod install`
+- open Xcode <kbd>COMMAND</kbd> + <kbd>R</kbd>
+
 ## Technology Stack
-Apptweak.io
-UIKit
+- Apptweak.io\n
+- UIKit
 
 
 ## Used libraries
-**LBTAComponents** - library by letsbuildthatapp.com for easy UICollectionViewController management ...
-**Kingfisher** - Popular image loader ...we all know this guy
-**Alamofire** - For handling network requests
-**ReadMoreTextView** - For showing collapsible text
-**AZSearchView** - Nice searchview controller...
+- **LBTAComponents** - library by letsbuildthatapp.com for easy UICollectionViewController management and view layouts amongst other things...\n
+- **Kingfisher** - Popular image loader ...we all know this guy
+- **Alamofire** - For handling network requests\n
+- **ReadMoreTextView** - For showing collapsible text\n
+- **AZSearchView** - Nice searchview controller...
 
 ## To do
-**1.** -- Split a lot of the files, some long .swift files exist in this project
+**1.** -- Split a lot of the files, some long .swift files exist in this project\n
 **2.** -- Read up on writing better animations
 
 License
