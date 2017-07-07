@@ -25,8 +25,8 @@ So I was following Brian Voong's Appstore videos on letsbuildthatapp.com and I d
 - **AZSearchView** - Nice searchview controller...
 
 ## To do
-**1.** -- Split a lot of the files, some long .swift files exist in this project
-**2.** -- Read up on writing better animations
+- **1.** Split a lot of the files, some long .swift files exist in this project
+- **2.** Read up on writing better animations
 
 License
 ----------------
