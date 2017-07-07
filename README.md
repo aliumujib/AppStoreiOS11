@@ -9,6 +9,9 @@ So I was following Brian Voong's Appstore videos on letsbuildthatapp.com and I d
 ## Installation
 - `git clone https://github.com/aliumujib/AppStoreiOS11`
 - `open AppStoreiOS11/AppStoreiOS11.xcworkspace`
+- go to https://apptweak.io
+- Register and obtain an API key.
+- Paste the API in the API_KEY constant in Constants.swift
 - open terminal `cd` to the directory and run `pod install`
 - open Xcode <kbd>COMMAND</kbd> + <kbd>R</kbd>
 
@@ -27,6 +30,7 @@ So I was following Brian Voong's Appstore videos on letsbuildthatapp.com and I d
 ## To do
 - **1.** Split a lot of the files, some long .swift files exist in this project
 - **2.** Read up on writing better animations
+- **3.** Better error handling
 
 License
 ----------------
