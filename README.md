@@ -13,19 +13,19 @@ So I was following Brian Voong's Appstore videos on letsbuildthatapp.com and I d
 - open Xcode <kbd>COMMAND</kbd> + <kbd>R</kbd>
 
 ## Technology Stack
-- Apptweak.io\n
+- Apptweak.io
 - UIKit
 
 
 ## Used libraries
-- **LBTAComponents** - library by letsbuildthatapp.com for easy UICollectionViewController management and view layouts amongst other things...\n
+- **LBTAComponents** - library by letsbuildthatapp.com for easy UICollectionViewController management and view layouts amongst other things...
 - **Kingfisher** - Popular image loader ...we all know this guy
-- **Alamofire** - For handling network requests\n
-- **ReadMoreTextView** - For showing collapsible text\n
+- **Alamofire** - For handling network requests
+- **ReadMoreTextView** - For showing collapsible text
 - **AZSearchView** - Nice searchview controller...
 
 ## To do
-**1.** -- Split a lot of the files, some long .swift files exist in this project\n
+**1.** -- Split a lot of the files, some long .swift files exist in this project
 **2.** -- Read up on writing better animations
 
 License
